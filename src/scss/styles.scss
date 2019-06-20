@@ -1,0 +1,138 @@
+@import "reset";
+@import "fonts";
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.intro__pause {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+  transition: 0.35s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+}
+
+.intro__play {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  position: absolute;
+  top: 16px;
+  left: 96px;
+  z-index: 2;
+  transition: 0.35s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+}
+
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  filter: invert(100%);
+  padding: 15px;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 2;
+  animation: 2s fadeInUp infinite;
+}
+
+.scroll-down-size {
+  width: 52px;
+  height: auto;
+}
+
+.scroll-down-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.videoContainer {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: yellowgreen;
+}
+
+.sectionContainer2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: pink;
+}
+
+.bgImgleft {
+  padding-left: 256px;
+  padding-top: 256px;
+  border-radius: 50%;
+  background-image: url('/assets/video/bg.jpg');
+  background-size: cover;
+}
+
+.bgImgright {
+  padding-right: 256px;
+  padding-top: 256px;
+  border-radius: 50%;
+  background-image: url('/assets/video/bg.jpg');
+  background-size: cover;
+}
+
+.text {
+  font-size: 36px;
+  color: white;
+}
+
+.timestamp {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}

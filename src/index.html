@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Basic site with parcel</title>
+    <link rel="stylesheet" href="scss/styles.scss" />
+  </head>
+
+  <body>
+    <div id="top" class="videoContainer">
+        <div class="intro__pause" onclick="document.getElementById('video1').pause()" ><img src="assets/video/pause.svg"/></div>
+        <div class="intro__play" onclick="document.getElementById('video1').play()" ><img src="assets/video/play.svg"/></div>
+        <div class="scroll-down">
+            <p class="scroll-down-text">Scroll</p>
+            <img class="scroll-down-size" src="assets/video/scroll.svg">
+        </div>
+      <video id="video1" class="video" autoplay loop>
+        <source src="assets/video/placeholder.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="sectionContainer">
+        <div class="bgImgleft">
+        </div>
+      <p class="text">Salut les <span class="timestamp" onclick="myFunction()">copains</span> comment ça va</p>
+    </div>
+    <div class="sectionContainer2">
+        <p class="text">Salut les <span class="timestamp" onclick="myFunction()">copains</span> comment ça va</p>
+            <div class="bgImgright">
+            </div>
+    </div>
+    <div class="sectionContainer">
+          <div class="bgImgleft">
+          </div>
+        <p class="text">Salut les <span class="timestamp" onclick="myFunction()">copains</span> comment ça va</p>
+      </div>
+  </body>
+  <script>
+    function myFunction() {
+      document.getElementById("video1").currentTime = 15;
+      document.getElementById('video1').play()
+      scroll(0,0);
+    }
+  </script>
+
+</html>
