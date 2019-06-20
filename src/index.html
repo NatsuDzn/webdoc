@@ -6,42 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Basic site with parcel</title>
     <link rel="stylesheet" href="scss/styles.scss" />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
 
   <body>
     <div id="top" class="videoContainer">
-        <div class="intro__pause" onclick="document.getElementById('video1').pause()" ><img src="assets/video/pause.svg"/></div>
-        <div class="intro__play" onclick="document.getElementById('video1').play()" ><img src="assets/video/play.svg"/></div>
-        <div class="scroll-down">
-            <p class="scroll-down-text">Scroll</p>
-            <img class="scroll-down-size" src="assets/video/scroll.svg">
-        </div>
+      <div
+        class="videoContainer__pause"
+        onclick="document.getElementById('video1').pause()"
+      >
+        <img src="assets/video/pause.svg" />
+      </div>
+      <div
+        class="videoContainer__play"
+        onclick="document.getElementById('video1').play()"
+      >
+        <img src="assets/video/play.svg" />
+      </div>
+      <div class="videoContainer__scroll">
+        <p class="videoContainer__scroll__text">Scroll</p>
+        <img
+          class="videoContainer__scroll__icon"
+          src="assets/video/scroll.svg"
+        />
+      </div>
       <video id="video1" class="video" autoplay loop>
         <source src="assets/video/placeholder.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="sectionContainer">
-        <div class="bgImgleft">
-        </div>
-      <p class="text">Salut les <span class="timestamp" onclick="myFunction()">copains</span> comment ça va</p>
+      <div class="bgImgleft"></div>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu elit
+        odio. Etiam pretium, eros sed tincidunt luctus, magna neque vehicula
+        metus, quis porttitor leo
+        <span class="timestamp" onclick="myFunction()">nulla</span> et neque.
+        Maecenas vel feugiat tortor, vitae tincidunt orci. Etiam pulvinar erat
+        et tincidunt convallis. Sed elementum faucibus arcu, nec sollicitudin
+        ipsum blandit quis. Nulla facilisi. Vestibulum imperdiet consectetur
+        neque, ac aliquam purus porttitor vel. Cras egestas ultrices dui a
+        aliquet. Morbi pellentesque ante at magna cursus, sed efficitur lectus
+        porttitor.
+      </p>
     </div>
     <div class="sectionContainer2">
-        <p class="text">Salut les <span class="timestamp" onclick="myFunction()">copains</span> comment ça va</p>
-            <div class="bgImgright">
-            </div>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu elit
+        odio. Etiam pretium, eros sed tincidunt luctus, magna neque vehicula
+        metus, quis porttitor leo
+        <span class="timestamp" onclick="myFunction()">nulla</span> et neque.
+        Maecenas vel feugiat tortor, vitae tincidunt orci. Etiam pulvinar erat
+        et tincidunt convallis. Sed elementum faucibus arcu, nec sollicitudin
+        ipsum blandit quis. Nulla facilisi. Vestibulum imperdiet consectetur
+        neque, ac aliquam purus porttitor vel. Cras egestas ultrices dui a
+        aliquet. Morbi pellentesque ante at magna cursus, sed efficitur lectus
+        porttitor.
+      </p>
+      <div class="bgImgright"></div>
     </div>
     <div class="sectionContainer">
-          <div class="bgImgleft">
-          </div>
-        <p class="text">Salut les <span class="timestamp" onclick="myFunction()">copains</span> comment ça va</p>
-      </div>
+      <div class="bgImgleft"></div>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu elit
+        odio. Etiam pretium, eros sed tincidunt luctus, magna neque vehicula
+        metus, quis porttitor leo
+        <span class="timestamp" onclick="myFunction()">nulla</span> et neque.
+        Maecenas vel feugiat tortor, vitae tincidunt orci. Etiam pulvinar erat
+        et tincidunt convallis. Sed elementum faucibus arcu, nec sollicitudin
+        ipsum blandit quis. Nulla facilisi. Vestibulum imperdiet consectetur
+        neque, ac aliquam purus porttitor vel. Cras egestas ultrices dui a
+        aliquet. Morbi pellentesque ante at magna cursus, sed efficitur lectus
+        porttitor.
+      </p>
+    </div>
   </body>
   <script>
+    ScrollReveal().reveal(".bgImgleft", { delay: 150 });
+    ScrollReveal().reveal(".bgImgright", { delay: 150 });
+    ScrollReveal().reveal(".text", { delay: 250 });
+
     function myFunction() {
       document.getElementById("video1").currentTime = 15;
-      document.getElementById('video1').play()
-      scroll(0,0);
+      document.getElementById("video1").play();
+      scroll(0, 0);
     }
   </script>
-
 </html>
