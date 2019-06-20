@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .video {
   width: 100vw;
   height: 100vh;
@@ -14,8 +18,21 @@ html {
 }
 
 .videoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
+
+  &__title {
+    position: absolute;
+    text-align: center;
+    font-size: 128px;
+    color: white;
+    z-index: 3;
+    font-weight: 700;
+  }
 
   &__pause {
     cursor: pointer;
@@ -66,8 +83,8 @@ html {
     animation: 2s fadeInUp infinite;
 
     &__text {
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 12px;
+      font-weight: 700;
       text-transform: uppercase;
       text-align: center;
     }
@@ -115,13 +132,14 @@ html {
 }
 
 .text {
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-size: 24px;
   width: 50vw;
+  line-height: 1.5;
 }
 
 .timestamp {
   text-decoration: underline;
+  font-weight: 700;
   cursor: pointer;
 }
