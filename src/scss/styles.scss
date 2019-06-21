@@ -103,7 +103,7 @@ body {
   flex-direction: row;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: yellowgreen;
+  background-color: white;
 }
 
 .sectionContainer2 {
@@ -112,34 +112,129 @@ body {
   align-items: center;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: pink;
+  background-color: white;
+}
+
+.imgContainer {
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+.imgContainerRight {
+  padding-right: 25px;
+  padding-top: 25px;
+}
+
+.imgNumber {
+  position: absolute;
+  top: 1005px;
+  left: 85px;
+  font-size: 144px;
+  font-weight: 700;
+  color: #f0b966;
+  z-index: 2;
+}
+
+.imgNumberRight {
+  position: absolute;
+  top: 1655px;
+  right: 170px;
+  font-size: 86px;
+  font-weight: 700;
+  width: 50vw;
+  color: #f0b966;
+  z-index: 2;
+}
+
+.imgNumberLast {
+  position: absolute;
+  bottom: -1870px;
+  left: 185px;
+  font-size: 128px;
+  font-weight: 700;
+  color: #f0b966;
+  z-index: 2;
 }
 
 .bgImgleft {
-  padding-left: 256px;
-  padding-top: 256px;
-  border-radius: 50%;
-  background-image: url("/assets/images/bg.jpg");
-  background-size: cover;
+  padding-left: 307px;
+  padding-top: 400px;
+  background-image: url("/assets/images/bd-aus.jpg");
 }
 
 .bgImgright {
-  padding-right: 256px;
-  padding-top: 256px;
-  border-radius: 50%;
-  background-image: url("/assets/images/bg.jpg");
+  padding-right: 392px;
+  padding-top: 555px;
+  background-image: url("/assets/images/bd-aus2.jpg");
+  background-size: cover;
+}
+
+.bgImglast {
+  padding-left: 457px;
+  padding-top: 255px;
+  background-image: url("/assets/images/bd-aus3.jpg");
   background-size: cover;
 }
 
 .text {
-  color: white;
+  color: black;
   font-size: 24px;
-  width: 50vw;
+  width: 40vw;
   line-height: 1.5;
+
+  &__considerable {
+    color: #f0b966;
+  }
 }
 
 .timestamp {
   text-decoration: underline;
   font-weight: 700;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+  .videoContainer__title {
+    font-size: 36px;
+  }
+
+  .sectionContainer,
+  .sectionContainer2 {
+    flex-direction: column;
+  }
+
+  .imgNumber,
+  .imgNumberRight,
+  .imgNumberLast {
+    display: none;
+  }
+
+  .bgImgleft {
+    padding-left: 307px;
+    padding-top: 411px;
+    background-size: cover;
+  }
+
+  .bgImgright {
+    padding-left: 193px;
+    padding-top: 900px;
+    transform: scale(.5);
+    background-image: url("/assets/images/bd-aus2.jpg");
+    background-size: cover;
+  }
+
+  .bgImglast {
+    padding-left: 228px;
+    padding-top: 127px;
+    transform: scale(1.5);
+    background-image: url("/assets/images/bd-aus3.jpg");
+    background-size: cover;
+  }
+
+  .text {
+    font-size: 18px;
+    width: 80vw;
+    line-height: 1.5;
+    text-align: center;
+  }
 }
