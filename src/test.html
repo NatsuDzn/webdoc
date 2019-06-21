@@ -10,21 +10,8 @@
   </head>
 
   <body>
-      <div class="modal1" id="modal1">
-            <div class="bgImgleft"></div>
-          <p class="text">
-            <span class="text__considerable">Auschwitz</span> est une bande dessinée
-            documentaire de Pascal Croci publiée en 2000 aux éditions Emmanuel
-            Proust.<br />
-          </p>
-        </div>
-        <div class="modal2" id="modal2">
-            <div class="bgImgleft"></div>
-          <p class="text">
-            <span class="text__considerable">lol</span> lol lol lol lol lol<br />
-          </p>
-        </div>
-    <div id="top" class="videoContainer">
+    <div id="top" class="videoContainer">      
+      </div>
       <h1 class="videoContainer__title">Placeholder <span id="demo"></span></h1>
       <div
         class="videoContainer__pause"
@@ -38,15 +25,26 @@
       >
         <img src="assets/images/play.svg" />
       </div>
-      <div class="orange-bar">
-          <div id="orange-juice" class="orange-juice"></div>
-        </div>
+      <div class="videoContainer__scroll">
+        <p class="videoContainer__scroll__text">Scroll</p>
+        <img
+          class="videoContainer__scroll__icon"
+          src="assets/images/scroll.svg"
+        />
+      </div>
       <video id="video1" class="video" autoplay loop>
         <source src="assets/video/placeholder.mp4" type="video/mp4" />
       </video>
     </div>
   </body>
   <script type="text/javascript" src="js/main.js"></script>
+  <script>
+    function myFunction() {
+      document.getElementById("video1").currentTime = 15;
+      document.getElementById("video1").play();
+      scroll(0, 0);
+    }
+  </script>
 </html>
 
 <!--

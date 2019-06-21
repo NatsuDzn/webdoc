@@ -17,6 +17,36 @@ body {
   z-index: 1;
 }
 
+.modal1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 15vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+
+.modal2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 15vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+
 .videoContainer {
   display: flex;
   justify-content: center;
@@ -68,32 +98,26 @@ body {
       transform: scale(1.1);
     }
   }
+}
 
-  &__scroll {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    filter: invert(100%);
-    padding: 15px;
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    z-index: 2;
-    animation: 2s fadeInUp infinite;
+.orange-bar {
+  position: absolute;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  z-index: 4;
+}
 
-    &__text {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    &__icon {
-      width: 52px;
-      height: auto;
-    }
-  }
+.orange-juice {
+  position: absolute;
+  height: 20px;
+  background-color: #f0b966;;
+  z-index: 3;
+  width: 0px;
+  transition: 0.5s ease;
+  z-index: 4;
 }
 
 .sectionContainer {
@@ -113,11 +137,6 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   background-color: white;
-}
-
-.imgContainer {
-  padding-left: 25px;
-  padding-top: 25px;
 }
 
 .imgContainerRight {
@@ -159,12 +178,14 @@ body {
 .bgImgleft {
   padding-left: 307px;
   padding-top: 400px;
+  transform: scale(.75);
   background-image: url("/assets/images/bd-aus.jpg");
 }
 
 .bgImgright {
   padding-right: 392px;
   padding-top: 555px;
+  transform: scale(.5);
   background-image: url("/assets/images/bd-aus2.jpg");
   background-size: cover;
 }
@@ -172,14 +193,15 @@ body {
 .bgImglast {
   padding-left: 457px;
   padding-top: 255px;
+  transform: scale(.5);
   background-image: url("/assets/images/bd-aus3.jpg");
   background-size: cover;
 }
 
 .text {
-  color: black;
-  font-size: 24px;
-  width: 40vw;
+  color: white;
+  font-size: 18px;
+  width: 10vw;
   line-height: 1.5;
 
   &__considerable {
