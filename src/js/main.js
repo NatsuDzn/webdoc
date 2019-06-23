@@ -1,6 +1,6 @@
 // Get the video element with id="myVideo"
 var vid = document.getElementById("video1");
-var juice = document.getElementById("orange-juice");
+var juice = document.getElementById("video-juice");
 
 document.onkeydown = function(event) {
   switch (event.keyCode) {

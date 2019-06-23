@@ -17,6 +17,12 @@ body {
   z-index: 1;
 }
 
+.modalTitle {
+  font-weight: 700;
+  color: white;
+  font-size: 36px;
+}
+
 .modal1 {
   display: flex;
   justify-content: space-around;
@@ -100,7 +106,7 @@ body {
   }
 }
 
-.orange-bar {
+.video-bar {
   position: absolute;
   height: 20px;
   bottom: 0;
@@ -110,10 +116,10 @@ body {
   z-index: 4;
 }
 
-.orange-juice {
+.video-juice {
   position: absolute;
   height: 20px;
-  background-color: #f0b966;;
+  background-color: #f0b966;
   z-index: 3;
   width: 0px;
   transition: 0.5s ease;
@@ -178,14 +184,14 @@ body {
 .bgImgleft {
   padding-left: 307px;
   padding-top: 400px;
-  transform: scale(.75);
+  transform: scale(0.75);
   background-image: url("/assets/images/bd-aus.jpg");
 }
 
 .bgImgright {
   padding-right: 392px;
   padding-top: 555px;
-  transform: scale(.5);
+  transform: scale(0.5);
   background-image: url("/assets/images/bd-aus2.jpg");
   background-size: cover;
 }
@@ -193,7 +199,7 @@ body {
 .bgImglast {
   padding-left: 457px;
   padding-top: 255px;
-  transform: scale(.5);
+  transform: scale(0.5);
   background-image: url("/assets/images/bd-aus3.jpg");
   background-size: cover;
 }
@@ -240,7 +246,7 @@ body {
   .bgImgright {
     padding-left: 193px;
     padding-top: 900px;
-    transform: scale(.5);
+    transform: scale(0.5);
     background-image: url("/assets/images/bd-aus2.jpg");
     background-size: cover;
   }
