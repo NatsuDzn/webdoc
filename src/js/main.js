@@ -26,7 +26,6 @@ window.addEventListener("scroll", () => {
     nbr1.classList.add("change");
     nbr1.classList.add("change");
     img2.classList.add("change");
-    img1.classList.remove("change");
     fleches.classList.add("change");
   }
   if (scrolled > 461) {
@@ -97,13 +96,13 @@ function annotation() {
     juice.style.width = juicePos * 100 + "%";
   });
 
-  if (vid.currentTime >= 1 && vid.currentTime <= 5) {
+  if (vid.currentTime >= 7 && vid.currentTime <= 16) {
     document.getElementById("modal1").style.opacity = "100";
   } else {
     document.getElementById("modal1").style.opacity = "0";
   }
 
-  if (vid.currentTime >= 8 && vid.currentTime <= 15) {
+  if (vid.currentTime >= 20 && vid.currentTime <= 35) {
     document.getElementById("modal2").style.opacity = "100";
   } else {
     document.getElementById("modal2").style.opacity = "0";

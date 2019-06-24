@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Basic site with parcel</title>
+    <title>Le comics</title>
     <link rel="stylesheet" href="../scss/styles.scss" />
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
@@ -13,14 +13,13 @@
     <div class="modal1" id="modal1">
       <div class="bgImgleft"></div>
       <p class="text">
-        <span class="text__considerable">Auschwitz</span> est une bande dessinée
-        documentaire de Pascal Croci publiée en 2000 aux éditions Emmanuel
-        Proust.<br />
+        Captain America est reconnaissable à sa tenue, son bouclier aux couleurs
+        du <span class="text__considerable">drapeau américain.</span>
       </p>
       <button class="modalFullButton" type="button">En savoir plus</button>
     </div>
     <div class="modal2" id="modal2">
-      <div class="bgImgleft"></div>
+      <div class="bgImgleft2"></div>
       <p class="text">
         Eo adducta re per Isauriam, rege Persarum bellis finitimis inligato
         repellenteque a conlimitiis suis ferocissimas gentes.
@@ -28,7 +27,12 @@
       <button class="modalFullButton" type="button">En savoir plus</button>
     </div>
     <div id="top" class="videoContainer">
-      <h1 class="videoContainer__title">Placeholder <span id="demo"></span></h1>
+      <h1 class="videoContainer__title">Time <span id="demo"></span></h1>
+      <a href="../index.html">
+        <div class="videoContainer__home">
+          <img src="../assets/images/home.svg" />
+        </div>
+      </a>
       <div
         class="videoContainer__pause"
         onclick="document.getElementById('video1').pause()"
@@ -41,10 +45,11 @@
       >
         <img src="../assets/images/play.svg" />
       </div>
-      <div
-        class="videoContainer__mute" id="mute"
-      >
-        <p>VOLUME</p><img src="../assets/images/mute.svg" />
+      <div class="videoContainer__mute" id="unmute" onclick="enableMute()">
+        <img src="../assets/images/mute.svg" />
+      </div>
+      <div class="videoContainer__unmute" id="mute" onclick="disableMute()">
+        <img src="../assets/images/unmute.svg" />
       </div>
       <div id="video-bar" class="video-bar">
         <div id="video-juice" class="video-juice"></div>
@@ -55,6 +60,17 @@
     </div>
   </body>
   <script type="text/javascript" src="../js/main.js"></script>
+  <script>
+    var vid = document.getElementById("video1");
+
+    function enableMute() {
+      vid.muted = true;
+    }
+
+    function disableMute() {
+      vid.muted = false;
+    }
+  </script>
 </html>
 
 <!--
