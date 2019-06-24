@@ -64,7 +64,7 @@ document.onkeydown = function(event) {
       event.preventDefault();
 
       vid_currentTime = vid.currentTime;
-      vid.currentTime -= parseInt(5);
+      vid.currentTime = vid_currentTime - 5;
 
     case 39:
       event.preventDefault();
@@ -101,10 +101,14 @@ function annotation() {
   } else {
     document.getElementById("modal1").style.opacity = "0";
   }
-
-  if (vid.currentTime >= 20 && vid.currentTime <= 35) {
-    document.getElementById("modal2").style.opacity = "100";
-  } else {
-    document.getElementById("modal2").style.opacity = "0";
-  }
 }
+
+document.getElementById("button").addEventListener("click", function() {
+  document.querySelector(".modal").style.display = "flex";
+  document.getElementById("video1").pause();
+});
+
+document.querySelector(".modal__close").addEventListener("click", function() {
+  document.querySelector(".modal").style.display = "none";
+  document.getElementById("video1").play();
+});
