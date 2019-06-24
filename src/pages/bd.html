@@ -11,25 +11,21 @@
 
   <body>
     <div class="modal1" id="modal1">
-      <h1 class="modalTitle">test</h1>
       <div class="bgImgleft"></div>
       <p class="text">
         <span class="text__considerable">Auschwitz</span> est une bande dessinée
         documentaire de Pascal Croci publiée en 2000 aux éditions Emmanuel
         Proust.<br />
       </p>
-      <button class="modalFull" type="button">En savoir plus</button>
+      <button class="modalFullButton" type="button">En savoir plus</button>
     </div>
     <div class="modal2" id="modal2">
-      <h1 class="modalTitle">test</h1>
       <div class="bgImgleft"></div>
       <p class="text">
         Eo adducta re per Isauriam, rege Persarum bellis finitimis inligato
-        repellenteque a conlimitiis suis ferocissimas gentes, quae mente quadam
-        versabili hostiliter eum saepe incessunt et in nos arma moventem
-        aliquotiens iuvant, Nohodares quidam nomine e numero optimatum.
+        repellenteque a conlimitiis suis ferocissimas gentes.
       </p>
-      <button class="modalFull" type="button">En savoir plus</button>
+      <button class="modalFullButton" type="button">En savoir plus</button>
     </div>
     <div id="top" class="videoContainer">
       <h1 class="videoContainer__title">Placeholder <span id="demo"></span></h1>
@@ -44,6 +40,11 @@
         onclick="document.getElementById('video1').play()"
       >
         <img src="../assets/images/play.svg" />
+      </div>
+      <div
+        class="videoContainer__mute" id="mute"
+      >
+        <p>VOLUME</p><img src="../assets/images/mute.svg" />
       </div>
       <div id="video-bar" class="video-bar">
         <div id="video-juice" class="video-juice"></div>
