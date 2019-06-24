@@ -4,56 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Basic site with parcel</title>
-    <link rel="stylesheet" href="scss/styles.scss" />
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="../src/scss/home.scss" />
+    <title>Accueil</title>
   </head>
-
   <body>
-    <div class="modal1" id="modal1">
-      <h1 class="modalTitle">test</h1>
-      <div class="bgImgleft"></div>
-      <p class="text">
-        <span class="text__considerable">Auschwitz</span> est une bande dessinée
-        documentaire de Pascal Croci publiée en 2000 aux éditions Emmanuel
-        Proust.<br />
-      </p>
+    <div class="elements">
+      <img src="assets/images/Group 2.png" class="backgroundImg1" />
+      <img src="assets/images/manga.png" class="backgroundImg2" />
+      <img src="assets/images/uderzo_risquetout13.jpg" class="backgroundImg3" />
+      <header>
+        <ul class="nav">
+          <a href="/">
+            <li><p class="logo">titre site</p></li>
+          </a>
+          <!--<li class="info"><p>info</p></li>
+        <li class="éléments"><p>éléments</p></li>
+        <li class="menu"><p>menu</p></li>-->
+        </ul>
+      </header>
+      <main>
+        <div class="scrollElements">
+          <div class="ligne"></div>
+          <div class="ligneSquare"></div>
+        </div>
+        <ul class="nbrScroll">
+          <li class="nbrTop1">01.</li>
+          <li class="nbrTop2">02.</li>
+          <li class="nbrTop3">03.</li>
+        </ul>
+        <ul class="textScroll">
+          <li class="textTop1">
+            Manga
+            <div class="flecheScroll">
+              <p>scroll</p>
+              <img src="assets/images/Path 2.png" class="fleche" />
+            </div>
+          </li>
+          <li class="textTop2">Comics</li>
+          <a href="../src/pages/bd.html">
+            <li class="textTop3">BD</li>
+          </a>
+        </ul>
+        <h1 class="text">
+          LA<span class="couleur"> VIOLENCE</span> DE LA GUERRE À TRAVERS LES
+          BANDES DESSINNÉES
+        </h1>
+      </main>
+      <footer>
+        <p>
+          “ Ce site à été réalisé à des fins pédagogiques dans le cadre du
+          cursus Bachelor de l’école HETIC. Les contenus présentés ne sont en
+          aucun cas exploités à des fins commerciales et ne seront pas publiés”
+        </p>
+      </footer>
     </div>
-    <div class="modal2" id="modal2">
-      <h1 class="modalTitle">test</h1>
-      <div class="bgImgleft"></div>
-      <p class="text">
-        Eo adducta re per Isauriam, rege Persarum bellis finitimis inligato
-        repellenteque a conlimitiis suis ferocissimas gentes, quae mente quadam
-        versabili hostiliter eum saepe incessunt et in nos arma moventem
-        aliquotiens iuvant, Nohodares quidam nomine e numero optimatum.
-      </p>
-    </div>
-    <div id="top" class="videoContainer">
-      <h1 class="videoContainer__title">Placeholder <span id="demo"></span></h1>
-      <div
-        class="videoContainer__pause"
-        onclick="document.getElementById('video1').pause()"
-      >
-        <img src="assets/images/pause.svg" />
-      </div>
-      <div
-        class="videoContainer__play"
-        onclick="document.getElementById('video1').play()"
-      >
-        <img src="assets/images/play.svg" />
-      </div>
-      <div id="video-bar" class="video-bar">
-        <div id="video-juice" class="video-juice"></div>
-      </div>
-      <video id="video1" class="video" autoplay>
-        <source src="assets/video/placeholder.mp4" type="video/mp4" />
-      </video>
-    </div>
+    <p class="scroll">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
+      voluptates deleniti repudiandae in nisi dolore quaerat unde fuga est et
+      nesciunt id repellat nulla ratione, nemo quisquam quam, eum molestias.
+    </p>
   </body>
   <script type="text/javascript" src="js/main.js"></script>
 </html>
-
-<!--
-  Pour la redirection
-  <span class="timestamp" onclick="myFunction()">nulla</span> -->

@@ -1,0 +1,287 @@
+@import "reset";
+@import "pages/fonts";
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.backgroundImg1 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s;
+  &.change {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+  }
+}
+
+.backgroundImg2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s;
+  &.change {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 1;
+  }
+}
+
+.backgroundImg3 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s;
+  &.change {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+  }
+}
+
+p,
+.text,
+.cultures {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.logo {
+  margin-right: 920px;
+  font-size: 30px;
+}
+
+.info,
+.éléments,
+.menu {
+  margin-left: 70px;
+}
+
+.text {
+  font-size: 55px;
+  font-style: bold;
+  margin-left: 500px;
+  margin-top: 220px;
+  position: fixed;
+}
+
+.cultures {
+  color: #f0b966;
+  font-size: 55px;
+}
+
+main,
+.scrollElements {
+  display: flex;
+}
+
+.ligne {
+  width: 1px;
+  height: 400px;
+  background: white;
+  margin-left: 40px;
+  margin-top: 150px;
+  opacity: 0.3;
+}
+
+.ligneSquare {
+  width: 3px;
+  height: 150px;
+  background: white;
+  margin-left: -2px;
+  margin-top: 100px;
+  transition: margin-top 0.2s;
+  &.change {
+    width: 3px;
+    height: 150px;
+    background: white;
+    margin-left: -2px;
+    margin-top: 260px;
+    transition: margin-top 0.2s;
+  }
+  &.changee {
+    width: 3px;
+    height: 150px;
+    background: white;
+    margin-left: -2px;
+    margin-top: 400px;
+    transition: margin-top 0.2s;
+  }
+}
+
+.lignBottom {
+  width: 1400px;
+  height: 1px;
+  background: white;
+  margin-top: 75px;
+  opacity: 0.3;
+  margin-left: 40px;
+}
+
+.bottom {
+  display: flex;
+}
+
+.ovals {
+  margin-top: 70px;
+  display: flex;
+  position: absolute;
+  margin-left: 35px;
+}
+
+.oval1,
+.oval2,
+.oval3 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  margin-right: 655px;
+  border-radius: 40px;
+}
+
+.oval1Text {
+  margin-top: 20px;
+  margin-left: -10px;
+}
+
+.oval2Text {
+  margin-top: 20px;
+  margin-left: -22px;
+}
+
+.oval3Text {
+  margin-top: 20px;
+  margin-left: -20px;
+}
+
+.elements {
+  position: fixed;
+}
+
+.scroll {
+  position: absolute;
+  margin-top: 2000px;
+  z-index: -1;
+}
+
+.nbrScroll {
+  margin-top: 130px;
+  margin-left: 50px;
+  font-family: "Poppins", sans-serif;
+  color: #f0b966;
+}
+
+.textScroll {
+  margin-top: 130px;
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.textTop1,
+.textTop2,
+.textTop3 {
+  margin-top: 90px;
+  font-size: 20px;
+  opacity: 0.5;
+  transition: margin-top 0.3s;
+}
+
+.textTop1.change {
+  margin-top: 15px;
+  font-size: 52px;
+  opacity: 1;
+}
+
+.textTop2.change {
+  margin-top: 60px;
+  font-size: 52px;
+  opacity: 1;
+}
+
+.textTop3.change {
+  margin-top: 90px;
+  font-size: 52px;
+  opacity: 1;
+}
+
+.nbrTop1,
+.nbrTop2,
+.nbrTop3 {
+  margin-top: 90px;
+  font-size: 20px;
+  opacity: 0.5;
+  transition: margin-top 0.3s;
+}
+
+.nbrTop1.change {
+  margin-top: 15px;
+  font-size: 52px;
+  opacity: 1;
+}
+
+.nbrTop2.change {
+  margin-top: 60px;
+  font-size: 52px;
+  opacity: 1;
+}
+
+.nbrTop3.change {
+  margin-top: 90px;
+  font-size: 52px;
+  opacity: 1;
+}
+
+.scipIntro {
+  margin-left: 89%;
+  position: absolute;
+  margin-top: 530px;
+  margin-left: 1290px;
+}
+
+.flecheScroll {
+  position: absolute;
+  margin-left: -85px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  &.change {
+    position: absolute;
+    margin-left: -85px;
+    opacity: 1;
+  }
+}
+
+.fleche {
+  margin-bottom: 25px;
+  margin-left: 12px;
+}
+
+.couleur {
+  color: #f0b966;
+}

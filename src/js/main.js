@@ -1,3 +1,60 @@
+// home slider
+
+var ligneSquare = document.querySelector(".ligneSquare");
+var text1 = document.querySelector(".textTop1");
+var text2 = document.querySelector(".textTop2");
+var text3 = document.querySelector(".textTop3");
+var nbr1 = document.querySelector(".nbrTop1");
+var nbr2 = document.querySelector(".nbrTop2");
+var nbr3 = document.querySelector(".nbrTop3");
+var img1 = document.querySelector(".backgroundImg1");
+var img2 = document.querySelector(".backgroundImg2");
+var img3 = document.querySelector(".backgroundImg3");
+var fleche = document.querySelectorAll(".flecheScroll");
+
+window.addEventListener("scroll", () => {
+  const scrolled = window.scrollY;
+  console.log(scrolled);
+  for (let i = 0; i < fleche.length; i++) {
+    var fleches = fleche[i];
+  }
+  if (scrolled < 461) {
+    ligneSquare.classList.remove("change");
+    text2.classList.remove("change");
+    text1.classList.add("change");
+    nbr2.classList.remove("change");
+    nbr1.classList.add("change");
+    nbr1.classList.add("change");
+    img2.classList.add("change");
+    img1.classList.remove("change");
+    fleches.classList.add("change");
+  }
+  if (scrolled > 461) {
+    ligneSquare.classList.remove("changee");
+    ligneSquare.classList.add("change");
+    text1.classList.remove("change");
+    text3.classList.remove("change");
+    text2.classList.add("change");
+    nbr1.classList.remove("change");
+    nbr3.classList.remove("change");
+    nbr2.classList.add("change");
+    img2.classList.remove("change");
+    img1.classList.add("change");
+    img3.classList.remove("change");
+    fleches.classList.remove("change");
+  }
+  if (scrolled > 922) {
+    ligneSquare.classList.remove("change");
+    ligneSquare.classList.add("changee");
+    text2.classList.remove("change");
+    text3.classList.add("change");
+    nbr2.classList.remove("change");
+    nbr3.classList.add("change");
+    img3.classList.add("change");
+    fleches.classList.remove("change");
+  }
+});
+
 // Get the video element with id="myVideo"
 var vid = document.getElementById("video1");
 var juice = document.getElementById("video-juice");
