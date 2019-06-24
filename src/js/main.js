@@ -98,12 +98,15 @@ function annotation() {
 
   if (vid.currentTime >= 7 && vid.currentTime <= 16) {
     document.getElementById("modal1").style.display = "flex";
+    document.querySelector(".modal1").style.opacity = "100";
   } else {
     document.getElementById("modal1").style.display = "none";
+    document.querySelector(".modal1").style.opacity = "0";
   }
 
   if (vid.currentTime >= 100 && vid.currentTime <= 116) {
     document.getElementById("modal2").style.display = "flex";
+    document.getElementById("modal2").style.opacity = "100";
   } else {
     document.getElementById("modal2").style.display = "none";
   }
