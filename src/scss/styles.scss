@@ -35,7 +35,21 @@ body {
   z-index: 2;
   position: absolute;
   right: 0;
-  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+
+.modal2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 15vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+  right: 0;
   transition: 0.35s ease-in-out;
 }
 
@@ -228,6 +242,7 @@ body {
     padding: 20px;
     position: relative;
     border-radius: 4px;
+    animation: zoomIn 0.5s;
   }
 
   &__close {
@@ -254,10 +269,6 @@ body {
     font-size: 16px;
     line-height: 1.5;
   }
-}
-
-.modalcomplet1 {
-  opacity: 0;
 }
 
 .sectionContainer {

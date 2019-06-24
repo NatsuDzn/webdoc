@@ -97,9 +97,15 @@ function annotation() {
   });
 
   if (vid.currentTime >= 7 && vid.currentTime <= 16) {
-    document.getElementById("modal1").style.opacity = "100";
+    document.getElementById("modal1").style.display = "flex";
   } else {
-    document.getElementById("modal1").style.opacity = "0";
+    document.getElementById("modal1").style.display = "none";
+  }
+
+  if (vid.currentTime >= 100 && vid.currentTime <= 116) {
+    document.getElementById("modal2").style.display = "flex";
+  } else {
+    document.getElementById("modal2").style.display = "none";
   }
 }
 
@@ -110,5 +116,15 @@ document.getElementById("button").addEventListener("click", function() {
 
 document.querySelector(".modal__close").addEventListener("click", function() {
   document.querySelector(".modal").style.display = "none";
+  document.getElementById("video1").play();
+});
+
+document.getElementById("button2").addEventListener("click", function() {
+  document.getElementById("show2").style.display = "flex";
+  document.getElementById("video1").pause();
+});
+
+document.getElementById("modalclose2").addEventListener("click", function() {
+  document.getElementById("show2").style.display = "none";
   document.getElementById("video1").play();
 });
