@@ -1,4 +1,4 @@
-// home slider
+// Page d'accueil
 
 var ligneSquare = document.querySelector(".ligneSquare");
 var text1 = document.querySelector(".textTop1");
@@ -54,10 +54,19 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Get the video element with id="myVideo"
+// Modals - Comics
 var vid = document.getElementById("video1");
 var juice = document.getElementById("video-juice");
 var skip = document.querySelector(".videoContainer__skip");
+var button1 = document.getElementById("button");
+var button2 = document.getElementById("button2");
+var modal = document.querySelector(".modal");
+var modal2 = document.getElementById("show2");
+var modalAnnotation1 = document.getElementById("modal1");
+var modalAnnotation2 = document.getElementById("modal2");
+var close = document.querySelector(".modal__close");
+var close2 = document.getElementById("modalclose2");
+var buttonMobile1 = document.getElementById("buttonMobile");
 
 document.onkeydown = function(event) {
   switch (event.keyCode) {
@@ -98,36 +107,42 @@ function annotation() {
   });
 
   if (vid.currentTime >= 7 && vid.currentTime <= 16) {
-    document.getElementById("modal1").style.display = "flex";
-    document.querySelector(".modal1").style.opacity = "100";
+    modalAnnotation1.style.display = "flex";
+    modalAnnotation1.style.opacity = "100";
   } else {
-    document.getElementById("modal1").style.display = "none";
+    modalAnnotation1.style.display = "none";
   }
 
   if (vid.currentTime >= 100 && vid.currentTime <= 116) {
-    document.getElementById("modal2").style.display = "flex";
-    document.getElementById("modal2").style.opacity = "100";
+    modalAnnotation2.style.display = "flex";
+    modalAnnotation2.style.opacity = "100";
   } else {
-    document.getElementById("modal2").style.display = "none";
+    modalAnnotation2.style.display = "none";
     }
 }
 
-document.getElementById("button").addEventListener("click", function() {
-  document.querySelector(".modal").style.display = "flex";
-  document.getElementById("video1").pause();
+button1.addEventListener("click", function() {
+  modal.style.display = "flex";
+  vid.pause();
 });
 
-document.querySelector(".modal__close").addEventListener("click", function() {
-  document.querySelector(".modal").style.display = "none";
-  document.getElementById("video1").play();
+close.addEventListener("click", function() {
+  modal.style.display = "none";
+  vid.play();
 });
 
-document.getElementById("button2").addEventListener("click", function() {
-  document.getElementById("show2").style.display = "flex";
-  document.getElementById("video1").pause();
+button2.addEventListener("click", function() {
+  modal2.style.display = "flex";
+  vid.pause();
 });
 
-document.getElementById("modalclose2").addEventListener("click", function() {
-  document.getElementById("show2").style.display = "none";
-  document.getElementById("video1").play();
+close2.addEventListener("click", function() {
+  modal2.style.display = "none";
+  vid.play();
+});
+
+//test mobile modal
+buttonMobile1.addEventListener("click", function() {
+  modal.style.display = "flex";
+  vid.pause();
 });
