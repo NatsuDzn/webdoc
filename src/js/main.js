@@ -57,6 +57,7 @@ window.addEventListener("scroll", () => {
 // Get the video element with id="myVideo"
 var vid = document.getElementById("video1");
 var juice = document.getElementById("video-juice");
+var skip = document.querySelector(".videoContainer__skip");
 
 document.onkeydown = function(event) {
   switch (event.keyCode) {
@@ -101,7 +102,6 @@ function annotation() {
     document.querySelector(".modal1").style.opacity = "100";
   } else {
     document.getElementById("modal1").style.display = "none";
-    document.querySelector(".modal1").style.opacity = "0";
   }
 
   if (vid.currentTime >= 100 && vid.currentTime <= 116) {
@@ -109,7 +109,11 @@ function annotation() {
     document.getElementById("modal2").style.opacity = "100";
   } else {
     document.getElementById("modal2").style.display = "none";
-  }
+    }
+}
+
+if (vid.currentTime = 0) {
+  document.getElementById("modal2").style.display = "none";
 }
 
 document.getElementById("button").addEventListener("click", function() {
