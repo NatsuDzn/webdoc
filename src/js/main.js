@@ -59,14 +59,12 @@ var vid = document.getElementById("video1");
 var juice = document.getElementById("video-juice");
 var skip = document.querySelector(".videoContainer__skip");
 var button1 = document.getElementById("button");
-var button2 = document.getElementById("button2");
 var modal = document.querySelector(".modal");
-var modal2 = document.getElementById("show2");
+var modalBg = document.querySelector(".modal1")
+var text = document.querySelector(".text");
+var textFull = document.querySelector(".textFull");
 var modalAnnotation1 = document.getElementById("modal1");
-var modalAnnotation2 = document.getElementById("modal2");
-var close = document.querySelector(".modal__close");
-var close2 = document.getElementById("modalclose2");
-var buttonMobile1 = document.getElementById("buttonMobile");
+var close = document.querySelector(".close");
 
 document.onkeydown = function(event) {
   switch (event.keyCode) {
@@ -112,37 +110,19 @@ function annotation() {
   } else {
     modalAnnotation1.style.display = "none";
   }
-
-  if (vid.currentTime >= 100 && vid.currentTime <= 116) {
-    modalAnnotation2.style.display = "flex";
-    modalAnnotation2.style.opacity = "100";
-  } else {
-    modalAnnotation2.style.display = "none";
-    }
 }
 
+
+// faire le bouton de la croix
 button1.addEventListener("click", function() {
-  modal.style.display = "flex";
+  modalBg.style.width = "100vw";
+  modalBg.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+  modalBg.style.flexDirection = "row" ;
+  button1.style.display = "none";
+  text.style.display = "none";
+  textFull.style.display = "flex";
+  modalBg.style.zIndex = "4";
+  close.style.display = "block";
   vid.pause();
 });
 
-close.addEventListener("click", function() {
-  modal.style.display = "none";
-  vid.play();
-});
-
-button2.addEventListener("click", function() {
-  modal2.style.display = "flex";
-  vid.pause();
-});
-
-close2.addEventListener("click", function() {
-  modal2.style.display = "none";
-  vid.play();
-});
-
-//test mobile modal
-buttonMobile1.addEventListener("click", function() {
-  modal.style.display = "flex";
-  vid.pause();
-});

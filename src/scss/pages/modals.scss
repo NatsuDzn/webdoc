@@ -11,41 +11,8 @@
   z-index: 2;
   position: absolute;
   right: 0;
-  animation: fadeInRight .6s ease;
-}
-
-.modal2 {
-  opacity: 0;
-  display: none;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  width: 15vw;
-  min-height: 100vh;
-  max-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-  position: absolute;
-  right: 0;
-  animation: fadeInRight .6s ease;
-}
-
-.modalFullButton {
-  cursor: pointer;
-  font-size: 16px;
-  width: 160px;
-  height: 50px;
-  border-radius: 10px;
-  border: none;
-  background-color: #f0b966;
-  color: white;
-  text-transform: uppercase;
-  transition: 0.35s ease-in-out;
-
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-  }
+  animation: fadeInRight 0.6s ease;
+  transition: ease 0.5s;
 }
 
 .modal {
@@ -70,20 +37,6 @@
     animation: zoomIn 0.5s;
   }
 
-  &__close {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 42px;
-    color: #333;
-    transform: rotate(45deg);
-    cursor: pointer;
-
-    &:hover {
-      color: #666;
-    }
-  }
-
   &__img {
     width: 35%;
   }
@@ -96,13 +49,23 @@
   }
 }
 
+.close {
+  display: none;
+  padding: 50px;
+  width: 32px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+  filter: invert(100%);
+}
+
 @media screen and (max-width: 1280px) {
   .modal1 {
     z-index: 0;
   }
 
   .modal {
-
     &__contents {
       height: 100vh;
       min-width: 70vw;
@@ -111,7 +74,7 @@
       padding: 20px;
       position: relative;
       border-radius: 4px;
-      animation: zoomIn 0.5s;    
+      animation: zoomIn 0.5s;
     }
 
     &__text {

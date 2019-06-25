@@ -6,104 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Le comics</title>
     <link rel="stylesheet" href="../scss/styles.scss" />
-    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
 
   <body>
     <!-- Essayer de faire fonctionner l'apparition proprement des annoatations -->
 
     <div class="complete">
-      <div class="modal">
-        <div class="modal__contents">
-          <div class="modal__close">+</div>
-          <img
-            class="modal__img"
-            src="../assets/images/comics/comics1.jpg"
-            alt=""
-          />
-          <p class="modal__text">
-            Cette première de couverture annonce ici, un récit des aventures du
-            Captain America contre des ennemis jurés des Etats-Unis d’Amérique,
-            <span class="highlights">les communistes.</span> Les mots «
-            suspense, actions » soulignent l’aspect narratif du magazine.
-            Cependant, notre étude nous a prouvé qu’il ne s’agit pas d’une
-            simple narration. En effet, ce magazine est
-            <span class="highlights"
-              >une arme de la propagande américaine pendant la Guerre
-              Froide</span
-            >
-            qui oppose les Etats-Unis à l’URSS. Captain America et les autres
-            super-héros sont les outils de cette propagande. Les premiers
-            destinataires de celle-ci sont les soldats américains engagés dans
-            cette guerre. Captain America représenté comme super puissant porte
-            les couleurs de son pays ainsi que son nom. Également la position de
-            victoire du héros américain vise à apaiser la population. il est
-            <span class="highlights">le symbole de l’Amérique puissante</span>
-            prête à protéger le monde de la menace communiste. Message destiné
-            aux Américains eux-mêmes et au reste du monde, URSS compris. Captain
-            America n’a pas de superpouvoirs, c’est un homme capable de faire
-            appel à toutes ses capacités physiques, à affronter le danger, à
-            risquer sa vie : il est
-            <span class="highlights">un exemple</span> pour mes soldats de
-            l’époque.
-          </p>
-        </div>
-      </div>
       <div class="modal1" id="modal1">
+        <img class="close" src="../assets/images/svg/close.svg">
         <div class="bgImgleft1"></div>
         <p class="text">
           Captain America est reconnaissable à sa tenue, son bouclier aux
           couleurs du <span class="highlights">drapeau américain.</span>
         </p>
-        <a href="#" id="button" class="button"
-          >en savoir plus
-          <img class="moreInfo" src="../assets/images/svg/moreinfo.svg"
-        /></a>
-      </div>
-    </div>
-    <div class="complete">
-      <div class="modal" id="show2">
-        <div class="modal__contents">
-          <div class="modal__close" id="modalclose2">+</div>
-          <img
-            class="modal__img"
-            src="../assets/images/comics/comics2.jpg"
-            alt=""
-          />
-          <p class="modal__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            tincidunt, est ut tristique convallis, erat ante varius ipsum, at
-            dapibus metus quam sed nunc. Pellentesque habitant morbi tristique
-            senectus et netus et malesuada fames ac turpis egestas. Duis a nunc
-            iaculis, porttitor odio vel, volutpat dolor. Curabitur elementum
-            velit elit, nec tincidunt dui luctus et. Phasellus consequat est
-            diam, vitae bibendum arcu aliquet quis. Pellentesque iaculis, metus
-            sit amet pellentesque ultricies, mi ex sollicitudin justo, at
-            condimentum mi risus sit amet velit. Quisque iaculis finibus quam.
-            Aliquam tristique eleifend lacus. Curabitur congue tortor ut enim
-            gravida pulvinar. Integer id finibus velit. Morbi fringilla rutrum
-            felis eget consectetur. Mauris id massa id nulla venenatis porta.
-            Nullam sollicitudin commodo est et interdum. Morbi urna felis, porta
-            quis elit eu, tempus molestie diam. Ut ligula mi, vestibulum nec
-            pulvinar vitae, laoreet quis mi. Morbi ut accumsan orci. Ut
-            tristique eros tempor massa auctor interdum. Pellentesque fringilla,
-            nibh luctus euismod accumsan, erat sapien hendrerit lorem, quis
-            porttitor ligula orci id diam. Suspendisse id risus quam.
-            Pellentesque pharetra ex lorem, eget vulputate purus aliquam non. Ut
-            vel nisl neque. Etiam hendrerit vehicula semper.
-          </p>
-        </div>
-      </div>
-      <div class="modal1" id="modal2">
-        <div class="bgImgleft2"></div>
-        <p class="text">
-          Captain America est reconnaissable à sa tenue, son bouclier aux
-          couleurs du <span class="highlights">drapeau américain.</span>
+        <p class="textFull">
+          Pendant la Seconde Guerre mondiale, Steve Rogers, soldat chétif mais
+          déterminé, participe à une expériencemédicale secrète qui le
+          transforme en surhomme. Il devient Captain America, sauveur des
+          Etats-Unis. Captain affronte alors les nazis et les Japonais. Pendant
+          la guerre froide, ses principaux ennemis sont les Soviétiques et les
+          communistes
         </p>
-        <a href="#" id="button2" class="button"
-          >en savoir plus
-          <img class="moreInfo" src="../assets/images/svg/moreinfo.svg"
-        /></a>
+        <a href="#" id="button" class="button"
+          ><img class="moreInfo" src="../assets/images/svg/moreinfo.svg" />
+        </a>
       </div>
     </div>
 
@@ -136,7 +62,11 @@
       <div class="videoContainer__unmute" id="mute" onclick="disableMute()">
         <img src="../assets/images/svg/unmute.svg" />
       </div>
-      <div class="videoContainer__info" id="buttonMobile" onclick="disableMute()">
+      <div
+        class="videoContainer__info"
+        id="buttonMobile"
+        onclick="disableMute()"
+      >
         <img src="../assets/images/svg/moreinfo.svg" />
       </div>
       <div id="video-bar" class="video-bar">
