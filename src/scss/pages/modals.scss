@@ -1,4 +1,6 @@
-.modal1 {
+.modal1,
+.modal2,
+.modal3 {
   opacity: 0;
   display: none;
   justify-content: space-evenly;
@@ -49,7 +51,9 @@
   }
 }
 
-.close {
+.close,
+.close2,
+.close3 {
   display: none;
   padding: 50px;
   width: 32px;
@@ -58,6 +62,40 @@
   right: 10px;
   cursor: pointer;
   filter: invert(100%);
+}
+
+.categoryIMG {
+  display: none;
+  position: absolute;
+  top: 145px;
+  left: 280px;
+  font-size: 185px;
+  font-weight: 700;
+  z-index: 3;
+  color: #f0b966;
+}
+
+.categoryIMG2 {
+  display: none;
+  position: absolute;
+  top: 200px;
+  left: 280px;
+  font-size: 86px;
+  font-weight: 700;
+  z-index: 3;
+  color: #f0b966;
+  width: 40vw;
+}
+
+.categoryIMG3 {
+  display: none;
+  position: absolute;
+  top: 145px;
+  left: 280px;
+  font-size: 185px;
+  font-weight: 700;
+  z-index: 3;
+  color: #f0b966;
 }
 
 @media screen and (max-width: 1280px) {

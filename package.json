@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "copy": "rm -rf dist/ && mkdir dist && mkdir dist/images && cp -R src/assets/images/svg dist/",
-    "dev": "npm run copy && parcel src/index.html",
-    "build": "npm run copy && parcel build src/index.html && cp _redirects dist/"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",

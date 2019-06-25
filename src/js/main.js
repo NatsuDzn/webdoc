@@ -64,12 +64,12 @@ var unmuteIcon = document.querySelector(".unmuteIcon");
 mute.onclick = function() {
   if (vid.muted === false) {
     vid.muted = true;
-    muteIcon.style.display = "flex";
-    unmuteIcon.style.display = "none";
-  } else {
-    vid.muted = false;
     muteIcon.style.display = "none";
     unmuteIcon.style.display = "flex";
+  } else {
+    vid.muted = false;
+    muteIcon.style.display = "flex";
+    unmuteIcon.style.display = "none";
   }
 };
 
@@ -91,17 +91,38 @@ pause.onclick = function() {
   }
 };
 
-// Modals - Comics
-var vid = document.getElementById("video1");
+// "Modals" - Comics
+var vid = document.querySelector(".video");
+var vidBD = document.getElementById("videoBD");
+var vidComics = document.getElementById("videoComics");
+var vidManga = document.getElementById("videoManga");
 var juice = document.getElementById("video-juice");
 var skip = document.querySelector(".videoContainer__skip");
 var button1 = document.getElementById("button");
+var button2 = document.getElementById("button2");
+var button3 = document.getElementById("button3");
 var modal = document.querySelector(".modal");
 var modalBg = document.querySelector(".modal1");
+var modalBg2 = document.querySelector(".modal2");
+var modalBg3 = document.querySelector(".modal3");
+var img1Comics = document.querySelector(".bgImgleft1");
+var img2Comics = document.querySelector(".bgImgleft2");
+var img3Comics = document.querySelector(".bgImgleft3");
+var imgText1 = document.querySelector(".categoryIMG");
+var imgText2 = document.querySelector(".categoryIMG2");
+var imgText3 = document.querySelector(".categoryIMG3");
 var text = document.querySelector(".text");
+var text2 = document.querySelector(".text2");
+var text3 = document.querySelector(".text3");
 var textFull = document.querySelector(".textFull");
+var textFull2 = document.querySelector(".textFull2");
+var textFull3 = document.querySelector(".textFull3");
 var modalAnnotation1 = document.getElementById("modal1");
+var modalAnnotation2 = document.getElementById("modal2");
+var modalAnnotation3 = document.getElementById("modal3");
 var close = document.querySelector(".close");
+var close2 = document.querySelector(".close2");
+var close3 = document.querySelector(".close3");
 
 document.onkeydown = function(event) {
   switch (event.keyCode) {
@@ -148,15 +169,32 @@ function annotation() {
     juice.style.width = juicePos * 100 + "%";
   });
 
-  if (vid.currentTime >= 7 && vid.currentTime <= 16) {
+  // Annotations Comics
+  if (vidComics.currentTime >= 7 && vidComics.currentTime <= 16) {
     modalAnnotation1.style.display = "flex";
     modalAnnotation1.style.opacity = "100";
   } else {
     modalAnnotation1.style.display = "none";
   }
+
+  // Annotations Comics 2
+  if (vidComics.currentTime >= 30 && vidComics.currentTime <= 45) {
+    modalAnnotation2.style.display = "flex";
+    modalAnnotation2.style.opacity = "100";
+  } else {
+    modalAnnotation2.style.display = "none";
+  }
+
+  // Annotations Comics 3
+  if (vidComics.currentTime >= 55 && vidComics.currentTime <= 70) {
+    modalAnnotation3.style.display = "flex";
+    modalAnnotation3.style.opacity = "100";
+  } else {
+    modalAnnotation3.style.display = "none";
+  }
 }
 
-// Ouverture
+// Ouverture Comics 1
 button1.addEventListener("click", function() {
   modalBg.style.width = "100vw";
   modalBg.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
@@ -168,10 +206,12 @@ button1.addEventListener("click", function() {
   close.style.display = "block";
   pauseIcon.style.display = "none";
   playIcon.style.display = "flex";
+  img1Comics.style.transform = "scale(1)";
+  imgText1.style.display = "flex";
   vid.pause();
 });
 
-// Fermeture
+// Fermeture Comics 1
 
 close.addEventListener("click", function() {
   modalBg.style.width = "";
@@ -184,5 +224,77 @@ close.addEventListener("click", function() {
   close.style.display = "";
   pauseIcon.style.display = "";
   playIcon.style.display = "";
+  img1Comics.style.transform = "";
+  imgText1.style.display = "";
+  vid.play();
+});
+
+// Ouverture Comics 2
+button2.addEventListener("click", function() {
+  modalBg2.style.width = "100vw";
+  modalBg2.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+  modalBg2.style.flexDirection = "row";
+  button2.style.display = "none";
+  text2.style.display = "none";
+  textFull2.style.display = "flex";
+  modalBg2.style.zIndex = "4";
+  close2.style.display = "block";
+  pauseIcon.style.display = "none";
+  playIcon.style.display = "flex";
+  img2Comics.style.transform = "scale(1)";
+  imgText2.style.display = "flex";
+  vid.pause();
+});
+
+// Fermeture Comics 2
+
+close2.addEventListener("click", function() {
+  modalBg2.style.width = "";
+  modalBg2.style.backgroundColor = "";
+  modalBg2.style.flexDirection = "";
+  button2.style.display = "";
+  text2.style.display = "";
+  textFull2.style.display = "";
+  modalBg2.style.zIndex = "";
+  close2.style.display = "";
+  pauseIcon.style.display = "";
+  playIcon.style.display = "";
+  img2Comics.style.transform = "";
+  imgText2.style.display = "";
+  vid.play();
+});
+
+// Ouverture Comics 3
+button3.addEventListener("click", function() {
+  modalBg3.style.width = "100vw";
+  modalBg3.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+  modalBg3.style.flexDirection = "row";
+  button3.style.display = "none";
+  text3.style.display = "none";
+  textFull3.style.display = "flex";
+  modalBg3.style.zIndex = "4";
+  close3.style.display = "block";
+  pauseIcon.style.display = "none";
+  playIcon.style.display = "flex";
+  img3Comics.style.transform = "scale(1)";
+  imgText3.style.display = "flex";
+  vid.pause();
+});
+
+// Fermeture Comics 3
+
+close3.addEventListener("click", function() {
+  modalBg3.style.width = "";
+  modalBg3.style.backgroundColor = "";
+  modalBg3.style.flexDirection = "";
+  button3.style.display = "";
+  text3.style.display = "";
+  textFull3.style.display = "";
+  modalBg3.style.zIndex = "";
+  close3.style.display = "";
+  pauseIcon.style.display = "";
+  playIcon.style.display = "";
+  img3Comics.style.transform = "";
+  imgText3.style.display = "";
   vid.play();
 });

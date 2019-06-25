@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>La BD</title>
+    <title>Le comics</title>
     <link rel="stylesheet" href="../scss/styles.scss" />
   </head>
 
@@ -12,48 +12,26 @@
     <!-- Essayer de faire fonctionner l'apparition proprement des annoatations -->
 
     <div class="complete">
-      <div class="modal">
-        <div class="modal__contents">
-          <div class="modal__close">+</div>
-          <img
-            class="modal__img"
-            src="../assets/images/comics/comics1.jpg"
-            alt=""
-          />
-          <p class="modal__text">
-            Cette première de couverture annonce ici, un récit des aventures du
-            Captain America contre des ennemis jurés des Etats-Unis d’Amérique,
-            les communistes.Les mots « suspense, actions » soulignent l’aspect
-            narratif du magazine. Cependant, notre étude nous a prouvé qu’il ne
-            s’agit pas d’une simple narration. En effet, ce magazine est une
-            arme de la propagande américaine pendant la Guerre Froide qui oppose
-            les Etats-Unis à l’URSS. Captain America et les autres super-héros
-            sont les outils de cette propagande. Les premiers destinataires de
-            celle-ci sont les soldats américains engagés dans cette guerre.
-            Captain America représenté comme super puissant porte les couleurs
-            de son pays ainsi que son nom. Également la position de victoire du
-            héros américain vise à apaiser la population. il est le symbole de
-            l’Amérique puissante prête à protéger le monde de la menace
-            communiste. Message destiné aux Américains eux-mêmes et au reste du
-            monde, URSS compris. Captain America n’a pas de superpouvoirs, c’est
-            un homme capable de faire appel à toutes ses capacités physiques, à
-            affronter le danger, à risquer sa vie : il est un exemple pour mes
-            soldats de l’époque.
-          </p>
-        </div>
-      </div>
-      <div class="modal1" id="modal1">
+      <div class="modal1 bd" id="modal1">
+        <img class="close" src="../assets/images/svg/close.svg" />
         <div class="bgImgleft1"></div>
         <p class="text">
           Captain America est reconnaissable à sa tenue, son bouclier aux
           couleurs du <span class="highlights">drapeau américain.</span>
         </p>
+        <p class="textFull">
+          Pendant la Seconde Guerre mondiale, Steve Rogers, soldat chétif mais
+          déterminé, participe à une expériencemédicale secrète qui le
+          transforme en surhomme. Il devient Captain America, sauveur des
+          Etats-Unis. Captain affronte alors les nazis et les Japonais. Pendant
+          la guerre froide, ses principaux ennemis sont les Soviétiques et les
+          communistes
+        </p>
         <a href="#" id="button" class="button"
-          >en savoir plus
-      </a>
+          ><img class="moreInfo" src="../assets/images/svg/moreinfo.svg" />
+        </a>
       </div>
     </div>
-    
 
     <div id="top" class="videoContainer">
       <h1 class="videoContainer__title">Time <span id="demo"></span></h1>
@@ -62,53 +40,29 @@
           <img src="../assets/images/svg/home.svg" />
         </div>
       </a>
-      <div
-        class="videoContainer__pause"
-        onclick="document.getElementById('video1').pause()"
-      >
-        <img src="../assets/images/svg/pause.svg" />
-      </div>
-      <div
-        class="videoContainer__play"
-        onclick="document.getElementById('video1').play()"
-      >
-        <img src="../assets/images/svg/play.svg" />
+      <div class="videoContainer__pause" id="pause">
+        <img class="pauseIcon" src="../assets/images/svg/pause.svg" />
+        <img class="playIcon" src="../assets/images/svg/play.svg" />
       </div>
       <div class="videoContainer__skip" id="skip">
         <p>IGNORER</p>
         <img src="../assets/images/svg/skip.svg" />
       </div>
-      <div class="videoContainer__mute" id="unmute" onclick="enableMute()">
-        <img src="../assets/images/svg/mute.svg" />
+      <div class="videoContainer__mute" id="mute">
+        <img class="muteIcon" src="../assets/images/svg/mute.svg" />
+        <img class="unmuteIcon" src="../assets/images/svg/unmute.svg" />
       </div>
-      <div class="videoContainer__unmute" id="mute" onclick="disableMute()">
-        <img src="../assets/images/svg/unmute.svg" />
-      </div>
-      <div
-        class="videoContainer__info"
-        id="buttonMobile"
-        onclick="disableMute()"
-      >
+      <div class="videoContainer__info" id="buttonMobile">
         <img src="../assets/images/svg/moreinfo.svg" />
       </div>
       <div id="video-bar" class="video-bar">
         <div id="video-juice" class="video-juice"></div>
       </div>
-      <video id="video1" class="video" autoplay>
+      <video id="videoBD" class="video" autoplay>
         <source src="../assets/video/bd_video.mp4" type="video/mp4" />
       </video>
     </div>
   </body>
-  <script>
-    var vid = document.getElementById("video1");
 
-    function enableMute() {
-      vid.muted = true;
-    }
-
-    function disableMute() {
-      vid.muted = false;
-    }
-  </script>
   <script type="text/javascript" src="../js/main.js"></script>
 </html>
