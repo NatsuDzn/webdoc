@@ -13,7 +13,7 @@
 
     <div class="complete">
       <div class="modal1" id="modal1">
-        <img class="close" src="../assets/images/svg/close.svg">
+        <img class="close" src="../assets/images/svg/close.svg" />
         <div class="bgImgleft1"></div>
         <p class="text">
           Captain America est reconnaissable à sa tenue, son bouclier aux
@@ -56,11 +56,8 @@
         <p>IGNORER</p>
         <img src="../assets/images/svg/skip.svg" />
       </div>
-      <div class="videoContainer__mute" id="unmute" onclick="enableMute()">
-        <img src="../assets/images/svg/mute.svg" />
-      </div>
-      <div class="videoContainer__unmute" id="mute" onclick="disableMute()">
-        <img src="../assets/images/svg/unmute.svg" />
+      <div class="videoContainer__unmute" id="mute">
+        <img class="unmuteIcon" src="../assets/images/svg/unmute.svg" />
       </div>
       <div
         class="videoContainer__info"
@@ -77,16 +74,6 @@
       </video>
     </div>
   </body>
-  <script>
-    var vid = document.getElementById("video1");
 
-    function enableMute() {
-      vid.muted = true;
-    }
-
-    function disableMute() {
-      vid.muted = false;
-    }
-  </script>
   <script type="text/javascript" src="../js/main.js"></script>
 </html>

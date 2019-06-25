@@ -54,6 +54,21 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Boutons
+
+var mute = document.getElementById("mute");
+var muteIcon = document.querySelector(".unmuteIcon");
+
+mute.onclick = function() {
+  if (vid.muted === false) {
+    vid.muted = true;
+    muteIcon.src = "/mute.a62f56fa.svg";
+  } else {
+    vid.muted = false;
+    muteIcon.src = "/unmute.45f822e3.svg";
+  }
+};
+
 // Modals - Comics
 var vid = document.getElementById("video1");
 var juice = document.getElementById("video-juice");
