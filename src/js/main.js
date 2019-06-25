@@ -170,7 +170,7 @@ function annotation() {
   });
 
   // Annotations Comics
-  if (vidComics.currentTime >= 7 && vidComics.currentTime <= 16) {
+  if (vidComics.currentTime >= 8 && vidComics.currentTime <= 18) {
     modalAnnotation1.style.display = "flex";
     modalAnnotation1.style.opacity = "100";
   } else {
@@ -178,7 +178,7 @@ function annotation() {
   }
 
   // Annotations Comics 2
-  if (vidComics.currentTime >= 30 && vidComics.currentTime <= 45) {
+  if (vidComics.currentTime >= 101 && vidComics.currentTime <= 111) {
     modalAnnotation2.style.display = "flex";
     modalAnnotation2.style.opacity = "100";
   } else {
@@ -186,7 +186,7 @@ function annotation() {
   }
 
   // Annotations Comics 3
-  if (vidComics.currentTime >= 55 && vidComics.currentTime <= 70) {
+  if (vidComics.currentTime >= 267 && vidComics.currentTime <= 277) {
     modalAnnotation3.style.display = "flex";
     modalAnnotation3.style.opacity = "100";
   } else {
