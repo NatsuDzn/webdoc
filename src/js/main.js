@@ -60,7 +60,7 @@ var juice = document.getElementById("video-juice");
 var skip = document.querySelector(".videoContainer__skip");
 var button1 = document.getElementById("button");
 var modal = document.querySelector(".modal");
-var modalBg = document.querySelector(".modal1")
+var modalBg = document.querySelector(".modal1");
 var text = document.querySelector(".text");
 var textFull = document.querySelector(".textFull");
 var modalAnnotation1 = document.getElementById("modal1");
@@ -112,12 +112,11 @@ function annotation() {
   }
 }
 
-
-// faire le bouton de la croix
+// Ouverture
 button1.addEventListener("click", function() {
   modalBg.style.width = "100vw";
   modalBg.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
-  modalBg.style.flexDirection = "row" ;
+  modalBg.style.flexDirection = "row";
   button1.style.display = "none";
   text.style.display = "none";
   textFull.style.display = "flex";
@@ -126,3 +125,16 @@ button1.addEventListener("click", function() {
   vid.pause();
 });
 
+// Fermeture
+
+close.addEventListener("click", function() {
+  modalBg.style.width = "";
+  modalBg.style.backgroundColor = "";
+  modalBg.style.flexDirection = "";
+  button1.style.display = "";
+  text.style.display = "";
+  textFull.style.display = "";
+  modalBg.style.zIndex = "";
+  close.style.display = "";
+  vid.play();
+});
