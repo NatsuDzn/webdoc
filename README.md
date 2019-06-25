@@ -1,6 +1,6 @@
-# Parcel boilerplate
+# webdoc
 
-Minimal boilerplate for parcel powered project
+Webdocumentaire (pas de crud pour le moment)
 
 ## How to use
 
