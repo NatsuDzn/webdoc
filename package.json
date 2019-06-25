@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "copy": "rm -rf dist/ && mkdir dist && mkdir dist/images && cp -R src/assets/images/svg dist/",
-    "dev": "npm run copy && parcel app/index.html",
-    "build": "npm run copy && parcel build app/index.html && cp _redirects dist/"
+    "dev": "npm run copy && parcel src/index.html",
+    "build": "npm run copy && parcel build src/index.html && cp _redirects dist/"
   },
   "keywords": [],
   "author": "",

@@ -57,15 +57,37 @@ window.addEventListener("scroll", () => {
 // Boutons
 
 var mute = document.getElementById("mute");
-var muteIcon = document.querySelector(".unmuteIcon");
+var muteIcon = document.querySelector(".muteIcon");
+var unmuteIcon = document.querySelector(".unmuteIcon");
 
+// Mute / Unmute
 mute.onclick = function() {
   if (vid.muted === false) {
     vid.muted = true;
-    muteIcon.src = "/mute.a62f56fa.svg";
+    muteIcon.style.display = "flex";
+    unmuteIcon.style.display = "none";
   } else {
     vid.muted = false;
-    muteIcon.src = "/unmute.45f822e3.svg";
+    muteIcon.style.display = "none";
+    unmuteIcon.style.display = "flex";
+  }
+};
+
+// Play / Pause document.getElementById('video1').pause()
+
+var pause = document.getElementById("pause");
+var pauseIcon = document.querySelector(".pauseIcon");
+var playIcon = document.querySelector(".playIcon");
+
+pause.onclick = function() {
+  if (vid.paused === false) {
+    vid.pause();
+    pauseIcon.style.display = "none";
+    playIcon.style.display = "flex";
+  } else {
+    vid.play();
+    pauseIcon.style.display = "flex";
+    playIcon.style.display = "none";
   }
 };
 
@@ -99,8 +121,15 @@ document.onkeydown = function(event) {
       event.preventDefault();
 
       {
-        if (vid.paused) vid.play();
-        else vid.pause();
+        if (vid.paused === false) {
+          vid.pause();
+          pauseIcon.style.display = "none";
+          playIcon.style.display = "flex";
+        } else {
+          vid.play();
+          pauseIcon.style.display = "flex";
+          playIcon.style.display = "none";
+        }
       }
   }
 };
@@ -137,6 +166,8 @@ button1.addEventListener("click", function() {
   textFull.style.display = "flex";
   modalBg.style.zIndex = "4";
   close.style.display = "block";
+  pauseIcon.style.display = "none";
+  playIcon.style.display = "flex";
   vid.pause();
 });
 
@@ -151,5 +182,7 @@ close.addEventListener("click", function() {
   textFull.style.display = "";
   modalBg.style.zIndex = "";
   close.style.display = "";
+  pauseIcon.style.display = "";
+  playIcon.style.display = "";
   vid.play();
 });

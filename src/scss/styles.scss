@@ -98,7 +98,7 @@ body {
     padding: 15px;
     position: absolute;
     top: 16px;
-    left: 256px;
+    left: 176px;
     z-index: 2;
     transition: 0.35s ease-in-out;
     border-radius: 100px;
@@ -116,23 +116,6 @@ body {
     position: absolute;
     bottom: 32px;
     left: 16px;
-    z-index: 2;
-    transition: 0.35s ease-in-out;
-    border-radius: 100px;
-
-    &:hover {
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-      transform: scale(1.1);
-    }
-  }
-
-  &__unmute {
-    cursor: pointer;
-    background-color: white;
-    padding: 15px;
-    position: absolute;
-    bottom: 32px;
-    left: 96px;
     z-index: 2;
     transition: 0.35s ease-in-out;
     border-radius: 100px;
@@ -239,6 +222,14 @@ body {
 
 .highlights {
   color: #f0b966;
+}
+
+.unmuteIcon, .pauseIcon {
+  display: flex;
+}
+
+.muteIcon, .playIcon {
+  display: none;
 }
 
 @media screen and (max-width: 1280px) {
