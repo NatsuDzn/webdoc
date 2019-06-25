@@ -112,10 +112,6 @@ function annotation() {
     }
 }
 
-if (vid.currentTime = 0) {
-  document.getElementById("modal2").style.display = "none";
-}
-
 document.getElementById("button").addEventListener("click", function() {
   document.querySelector(".modal").style.display = "flex";
   document.getElementById("video1").pause();
