@@ -59,8 +59,14 @@ a {
   }
 }
 
+.text {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 50vw;
+  font-size: 64px;
+}
+
 p,
-.text,
 .cultures {
   font-family: "Poppins", sans-serif;
   color: white;
@@ -85,11 +91,12 @@ p,
 }
 
 .text {
-  font-size: 55px;
+  font-size: 64px;
   font-style: bold;
   margin-left: 500px;
   margin-top: 220px;
   position: fixed;
+  line-height: 82px;
 }
 
 .cultures {
@@ -285,6 +292,7 @@ main,
 
 .couleur {
   color: #f0b966;
+  font-weight: 700;
 }
 
 footer {
