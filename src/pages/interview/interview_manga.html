@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Le comics</title>
+    <link rel="stylesheet" href="../../scss/styles.scss" />
+  </head>
+
+  <body>
+    <div id="top" class="videoContainer">
+      <h1 class="videoContainer__title">Time <span id="demo"></span></h1>
+      <a href="../../index.html">
+        <div class="videoContainer__home">
+          <img src="../../assets/images/svg/home.svg" />
+        </div>
+      </a>
+      <div class="videoContainer__pause" id="pause">
+        <img class="pauseIcon" src="../../assets/images/svg/pause.svg" />
+        <img class="playIcon" src="../../assets/images/svg/play.svg" />
+      </div>
+      <div class="videoContainer__skip" id="skip">
+        <p>IGNORER</p>
+        <img src="../../assets/images/svg/skip.svg" />
+      </div>
+      <div class="videoContainer__mute" id="mute">
+        <img class="muteIcon" src="../../assets/images/svg/mute.svg" />
+        <img class="unmuteIcon" src="../../assets/images/svg/unmute.svg" />
+      </div>
+      <div class="videoContainer__info" id="buttonMobile">
+        <img src="../../assets/images/svg/moreinfo.svg" />
+      </div>
+      <div id="video-bar" class="video-bar">
+        <div id="video-juice" class="video-juice"></div>
+      </div>
+      <video id="mangaInterview" class="video" autoplay>
+        <source src="../../assets/video/manga_interview.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </body>
+  <script type="text/javascript" src="../../js/main.js"></script>
+  <script>
+    var interviewManga = document.getElementById("mangaInterview");
+    var juice = document.getElementById("video-juice");
+
+    // Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
+    interviewManga.ontimeupdate = function() {
+      interview();
+    };
+
+    function interview() {
+      // Display the current position of the video in a p element with id="demo"
+      document.getElementById("demo").innerHTML = interviewManga.currentTime;
+
+      interviewManga.addEventListener("timeupdate", function() {
+        var juicePos = interviewManga.currentTime / interviewManga.duration;
+        juice.style.width = juicePos * 100 + "%";
+      });
+    }
+  </script>
+</html>

@@ -100,6 +100,7 @@ var vid = document.querySelector(".video");
 var vidBD = document.getElementById("videoBD");
 var vidComics = document.getElementById("videoComics");
 var vidManga = document.getElementById("videoManga");
+var interviewManga = document.getElementById("mangaInterview");
 var juice = document.getElementById("video-juice");
 var skip = document.querySelector(".videoContainer__skip");
 var button1 = document.getElementById("button");
@@ -452,4 +453,4 @@ close3.addEventListener("click", function() {
   img3BD.style.transform = "";
   imgText3.style.display = "";
   vid.play();
-});
+})
