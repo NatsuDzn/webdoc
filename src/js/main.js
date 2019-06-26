@@ -114,6 +114,9 @@ var img3Comics = document.querySelector(".bgImgleft3");
 var img1BD = document.querySelector(".bgImgleft1BD");
 var img2BD = document.querySelector(".bgImgleft2BD");
 var img3BD = document.querySelector(".bgImgleft3BD");
+var img1Manga = document.querySelector(".bgImgleft1Manga");
+var img2Manga = document.querySelector(".bgImgleft2Manga");
+var img3Manga = document.querySelector(".bgImgleft3Manga");
 var imgText1 = document.querySelector(".categoryIMG");
 var imgText2 = document.querySelector(".categoryIMG2");
 var imgText3 = document.querySelector(".categoryIMG3");
@@ -168,10 +171,10 @@ vid.ontimeupdate = function() {
 
 function annotation() {
   // Display the current position of the video in a p element with id="demo"
-  document.getElementById("demo").innerHTML = vid.currentTime;
+  document.getElementById("demo").innerHTML = vidComics.currentTime;
 
-  vid.addEventListener("timeupdate", function() {
-    var juicePos = vid.currentTime / vid.duration;
+  vidComics.addEventListener("timeupdate", function() {
+    var juicePos = vidComics.currentTime / vidComics.duration;
     juice.style.width = juicePos * 100 + "%";
   });
 
@@ -212,7 +215,7 @@ button1.addEventListener("click", function() {
   close.style.display = "block";
   pauseIcon.style.display = "none";
   playIcon.style.display = "flex";
-  img1Comics.style.transform = "scale(1.85)";
+  img1Comics.style.transform = "scale(2)";
   imgText1.style.display = "flex";
   vid.pause();
 });

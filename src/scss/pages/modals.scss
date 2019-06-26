@@ -73,6 +73,15 @@
   z-index: 4;
 }
 
+.bgImgleft1Manga {
+  padding-left: 184px;
+  padding-top: 252px;
+  background-image: url("/assets/images/manga/manga-1.jpg");
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+}
+
 .bgImgleft2 {
   padding-left: 242px;
   padding-top: 165px;
@@ -91,6 +100,15 @@
   z-index: 4;
 }
 
+.bgImgleft2Manga {
+  padding-left: 247px;
+  padding-top: 350px;
+  background-image: url("/assets/images/manga/manga-2.jpg");
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+}
+
 .bgImgleft3 {
   padding-left: 184px;
   padding-top: 252px;
@@ -104,6 +122,15 @@
   padding-left: 247px;
   padding-top: 138px;
   background-image: url("/assets/images/bd/bd-aus3.jpg");
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+}
+
+.bgImgleft3Manga {
+  padding-left: 247px;
+  padding-top: 350px;
+  background-image: url("/assets/images/manga/manga-2.jpg");
   background-size: cover;
   transition: 0.5s ease-in-out;
   z-index: 4;
