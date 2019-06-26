@@ -56,30 +56,54 @@
 }
 
 .bgImgleft1 {
-  padding-left: 368px;
-  padding-top: 504px;
-  transform: scale(0.5);
+  padding-left: 184px;
+  padding-top: 252px;
   background-image: url("/assets/images/comics/comics1.jpg");
   background-size: cover;
   transition: 0.5s ease-in-out;
   z-index: 4;
 }
 
+.bgImgleft1BD {
+  padding-left: 184px;
+  padding-top: 252px;
+  background-image: url("/assets/images/bd/bd-aus.jpg");
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+}
+
 .bgImgleft2 {
-  padding-left: 558px;
-  padding-top: 380px;
-  transform: scale(0.40);
+  padding-left: 242px;
+  padding-top: 165px;
   background-image: url("/assets/images/comics/comics2.jpg");
   background-size: cover;
   transition: 0.5s ease-in-out;
   z-index: 4;
 }
 
+.bgImgleft2BD {
+  padding-left: 247px;
+  padding-top: 350px;
+  background-image: url("/assets/images/bd/bd-aus2.jpg");
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+}
+
 .bgImgleft3 {
-  padding-left: 368px;
-  padding-top: 504px;
-  transform: scale(0.5);
+  padding-left: 184px;
+  padding-top: 252px;
   background-image: url("/assets/images/comics/comics3.jpg");
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+}
+
+.bgImgleft3BD {
+  padding-left: 247px;
+  padding-top: 138px;
+  background-image: url("/assets/images/bd/bd-aus3.jpg");
   background-size: cover;
   transition: 0.5s ease-in-out;
   z-index: 4;
@@ -107,7 +131,7 @@
   flex-direction: column;
   color: white;
   padding: 10px;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.5;
   width: 45vw;
 }

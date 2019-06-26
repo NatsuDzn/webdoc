@@ -64,12 +64,12 @@ var unmuteIcon = document.querySelector(".unmuteIcon");
 mute.onclick = function() {
   if (vid.muted === false) {
     vid.muted = true;
-    muteIcon.style.display = "none";
-    unmuteIcon.style.display = "flex";
-  } else {
-    vid.muted = false;
     muteIcon.style.display = "flex";
     unmuteIcon.style.display = "none";
+  } else {
+    vid.muted = false;
+    muteIcon.style.display = "none";
+    unmuteIcon.style.display = "flex";
   }
 };
 
@@ -101,13 +101,15 @@ var skip = document.querySelector(".videoContainer__skip");
 var button1 = document.getElementById("button");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
-var modal = document.querySelector(".modal");
 var modalBg = document.querySelector(".modal1");
 var modalBg2 = document.querySelector(".modal2");
 var modalBg3 = document.querySelector(".modal3");
 var img1Comics = document.querySelector(".bgImgleft1");
 var img2Comics = document.querySelector(".bgImgleft2");
 var img3Comics = document.querySelector(".bgImgleft3");
+var img1BD = document.querySelector(".bgImgleft1BD");
+var img2BD = document.querySelector(".bgImgleft2BD");
+var img3BD = document.querySelector(".bgImgleft3BD");
 var imgText1 = document.querySelector(".categoryIMG");
 var imgText2 = document.querySelector(".categoryIMG2");
 var imgText3 = document.querySelector(".categoryIMG3");
@@ -206,7 +208,7 @@ button1.addEventListener("click", function() {
   close.style.display = "block";
   pauseIcon.style.display = "none";
   playIcon.style.display = "flex";
-  img1Comics.style.transform = "scale(1)";
+  img1Comics.style.transform = "scale(2)";
   imgText1.style.display = "flex";
   vid.pause();
 });
@@ -241,7 +243,7 @@ button2.addEventListener("click", function() {
   close2.style.display = "block";
   pauseIcon.style.display = "none";
   playIcon.style.display = "flex";
-  img2Comics.style.transform = "scale(1)";
+  img2Comics.style.transform = "scale(2)";
   imgText2.style.display = "flex";
   vid.pause();
 });
@@ -276,7 +278,7 @@ button3.addEventListener("click", function() {
   close3.style.display = "block";
   pauseIcon.style.display = "none";
   playIcon.style.display = "flex";
-  img3Comics.style.transform = "scale(1)";
+  img3Comics.style.transform = "scale(2)";
   imgText3.style.display = "flex";
   vid.pause();
 });
@@ -295,6 +297,152 @@ close3.addEventListener("click", function() {
   pauseIcon.style.display = "";
   playIcon.style.display = "";
   img3Comics.style.transform = "";
+  imgText3.style.display = "";
+  vid.play();
+});
+
+// BD 
+
+// Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
+vidBD.ontimeupdate = function() {
+  annotationBD();
+};
+
+function annotationBD() {
+  // Display the current position of the video in a p element with id="demo"
+  document.getElementById("demo").innerHTML = vidBD.currentTime;
+
+  vidBD.addEventListener("timeupdate", function() {
+    var juicePos = vidBD.currentTime / vidBD.duration;
+    juice.style.width = juicePos * 100 + "%";
+  });
+
+  // Annotation BD 1
+  if (vidBD.currentTime >= 4 && vidBD.currentTime <= 14) {
+    modalAnnotation1.style.display = "flex";
+    modalAnnotation1.style.opacity = "100";
+  } else {
+    modalAnnotation1.style.display = "none";
+  }
+
+  // Annotation BD 2
+  if (vidBD.currentTime >= 75 && vidBD.currentTime <= 85) {
+    modalAnnotation2.style.display = "flex";
+    modalAnnotation2.style.opacity = "100";
+  } else {
+    modalAnnotation2.style.display = "none";
+  }
+
+  // Annotation BD 3
+  if (vidBD.currentTime >= 114 && vidBD.currentTime <= 136) {
+    modalAnnotation3.style.display = "flex";
+    modalAnnotation3.style.opacity = "100";
+  } else {
+    modalAnnotation3.style.display = "none";
+  }
+}
+
+// Ouverture BD 1
+button1.addEventListener("click", function() {
+  modalBg.style.width = "100vw";
+  modalBg.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+  modalBg.style.flexDirection = "row";
+  button1.style.display = "none";
+  text.style.display = "none";
+  textFull.style.display = "flex";
+  modalBg.style.zIndex = "4";
+  close.style.display = "block";
+  pauseIcon.style.display = "none";
+  playIcon.style.display = "flex";
+  img1BD.style.transform = "scale(2)";
+  imgText1.style.display = "flex";
+  vid.pause();
+});
+
+// Fermeture BD 1
+
+close.addEventListener("click", function() {
+  modalBg.style.width = "";
+  modalBg.style.backgroundColor = "";
+  modalBg.style.flexDirection = "";
+  button1.style.display = "";
+  text.style.display = "";
+  textFull.style.display = "";
+  modalBg.style.zIndex = "";
+  close.style.display = "";
+  pauseIcon.style.display = "";
+  playIcon.style.display = "";
+  img1BD.style.transform = "";
+  imgText1.style.display = "";
+  vid.play();
+});
+
+// Ouverture BD 2
+button2.addEventListener("click", function() {
+  modalBg2.style.width = "100vw";
+  modalBg2.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+  modalBg2.style.flexDirection = "row";
+  button2.style.display = "none";
+  text2.style.display = "none";
+  textFull2.style.display = "flex";
+  modalBg2.style.zIndex = "4";
+  close2.style.display = "block";
+  pauseIcon.style.display = "none";
+  playIcon.style.display = "flex";
+  img2BD.style.transform = "scale(1.1)";
+  imgText2.style.display = "flex";
+  vid.pause();
+});
+
+// Fermeture BD 2
+
+close2.addEventListener("click", function() {
+  modalBg2.style.width = "";
+  modalBg2.style.backgroundColor = "";
+  modalBg2.style.flexDirection = "";
+  button2.style.display = "";
+  text2.style.display = "";
+  textFull2.style.display = "";
+  modalBg2.style.zIndex = "";
+  close2.style.display = "";
+  pauseIcon.style.display = "";
+  playIcon.style.display = "";
+  img2BD.style.transform = "";
+  imgText2.style.display = "";
+  vid.play();
+});
+
+// Ouverture BD 3
+button3.addEventListener("click", function() {
+  modalBg3.style.width = "100vw";
+  modalBg3.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+  modalBg3.style.flexDirection = "row";
+  button3.style.display = "none";
+  text3.style.display = "none";
+  textFull3.style.display = "flex";
+  modalBg3.style.zIndex = "4";
+  close3.style.display = "block";
+  pauseIcon.style.display = "none";
+  playIcon.style.display = "flex";
+  img3BD.style.transform = "scale(2)";
+  imgText3.style.display = "flex";
+  vid.pause();
+});
+
+// Fermeture BD 3
+
+close3.addEventListener("click", function() {
+  modalBg3.style.width = "";
+  modalBg3.style.backgroundColor = "";
+  modalBg3.style.flexDirection = "";
+  button3.style.display = "";
+  text3.style.display = "";
+  textFull3.style.display = "";
+  modalBg3.style.zIndex = "";
+  close3.style.display = "";
+  pauseIcon.style.display = "";
+  playIcon.style.display = "";
+  img3BD.style.transform = "";
   imgText3.style.display = "";
   vid.play();
 });
