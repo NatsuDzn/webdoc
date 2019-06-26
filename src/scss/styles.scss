@@ -27,6 +27,7 @@ body {
   min-height: 100vh;
 
   &__title {
+    display: none;
     position: absolute;
     text-align: center;
     font-size: 64px;

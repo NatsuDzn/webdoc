@@ -180,24 +180,24 @@ function annotationManga() {
     juice.style.width = juicePos * 100 + "%";
   });
 
-  // Annotation BD 1
-  if (vidManga.currentTime >= 4 && vidManga.currentTime <= 14) {
+  // Annotation Manga 1
+  if (vidManga.currentTime >= 30 && vidManga.currentTime <= 40) {
     modalAnnotation1.style.display = "flex";
     modalAnnotation1.style.opacity = "100";
   } else {
     modalAnnotation1.style.display = "none";
   }
 
-  // Annotation BD 2
-  if (vidManga.currentTime >= 75 && vidManga.currentTime <= 85) {
+  // Annotation Manga 2
+  if (vidManga.currentTime >= 90 && vidManga.currentTime <= 100) {
     modalAnnotation2.style.display = "flex";
     modalAnnotation2.style.opacity = "100";
   } else {
     modalAnnotation2.style.display = "none";
   }
 
-  // Annotation BD 3
-  if (vidManga.currentTime >= 114 && vidManga.currentTime <= 136) {
+  // Annotation Manga 3
+  if (vidManga.currentTime >= 76 && vidManga.currentTime <= 86) {
     modalAnnotation3.style.display = "flex";
     modalAnnotation3.style.opacity = "100";
   } else {
@@ -205,7 +205,7 @@ function annotationManga() {
   }
 }
 
-// Ouverture BD 1
+// Ouverture Manga 1
 button1.addEventListener("click", function() {
   modalBg.style.width = "100vw";
   modalBg.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
@@ -217,12 +217,12 @@ button1.addEventListener("click", function() {
   close.style.display = "block";
   pauseIcon.style.display = "none";
   playIcon.style.display = "flex";
-  img1BD.style.transform = "scale(2)";
+  img1Manga.style.transform = "scale(2)";
   imgText1.style.display = "flex";
   vid.pause();
 });
 
-// Fermeture BD 1
+// Fermeture Manga 1
 
 close.addEventListener("click", function() {
   modalBg.style.width = "";
@@ -235,12 +235,12 @@ close.addEventListener("click", function() {
   close.style.display = "";
   pauseIcon.style.display = "";
   playIcon.style.display = "";
-  img1BD.style.transform = "";
+  img1Manga.style.transform = "";
   imgText1.style.display = "";
   vid.play();
 });
 
-// Ouverture BD 2
+// Ouverture Manga 2
 button2.addEventListener("click", function() {
   modalBg2.style.width = "100vw";
   modalBg2.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
@@ -252,12 +252,12 @@ button2.addEventListener("click", function() {
   close2.style.display = "block";
   pauseIcon.style.display = "none";
   playIcon.style.display = "flex";
-  img2BD.style.transform = "scale(1.1)";
+  img2Manga.style.transform = "scale(2.2)";
   imgText2.style.display = "flex";
   vid.pause();
 });
 
-// Fermeture BD 2
+// Fermeture Manga 2
 
 close2.addEventListener("click", function() {
   modalBg2.style.width = "";
@@ -270,12 +270,12 @@ close2.addEventListener("click", function() {
   close2.style.display = "";
   pauseIcon.style.display = "";
   playIcon.style.display = "";
-  img2BD.style.transform = "";
+  img2Manga.style.transform = "";
   imgText2.style.display = "";
   vid.play();
 });
 
-// Ouverture BD 3
+// Ouverture Manga 3
 button3.addEventListener("click", function() {
   modalBg3.style.width = "100vw";
   modalBg3.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
@@ -287,7 +287,7 @@ button3.addEventListener("click", function() {
   close3.style.display = "block";
   pauseIcon.style.display = "none";
   playIcon.style.display = "flex";
-  img3BD.style.transform = "scale(2)";
+  img3Manga.style.transform = "scale(2)";
   imgText3.style.display = "flex";
   vid.pause();
 });
@@ -305,7 +305,7 @@ close3.addEventListener("click", function() {
   close3.style.display = "";
   pauseIcon.style.display = "";
   playIcon.style.display = "";
-  img3BD.style.transform = "";
+  img3Manga.style.transform = "";
   imgText3.style.display = "";
   vid.play();
 });
