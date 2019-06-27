@@ -309,3 +309,24 @@ close3.addEventListener("click", function() {
   imgText3.style.display = "";
   vid.play();
 });
+
+var indicatorManga1 = document.querySelector(".videoContainer__indicatorManga1");
+var indicatorManga2 = document.querySelector(".videoContainer__indicatorManga2");
+var indicatorManga3 = document.querySelector(".videoContainer__indicatorManga3");
+
+// Redirection 
+
+indicatorManga1.addEventListener("click", function() {
+  vidManga.currentTime = 30;
+  vidManga.play();
+});
+
+indicatorManga2.addEventListener("click", function() {
+  vidManga.currentTime = 76;
+  vidManga.play();
+});
+
+indicatorManga3.addEventListener("click", function() {
+  vidManga.currentTime = 90;
+  vidManga.play();
+});

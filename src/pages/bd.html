@@ -127,11 +127,11 @@
         <img class="playIcon" src="../assets/images/svg/play.svg" />
       </div>
       <a href="../pages/interview/interview_bd.html">
-      <div class="videoContainer__skip" id="skip">
-        <p>IGNORER</p>
-        <img src="../assets/images/svg/skip.svg" />
-      </div>
-    </a>
+        <div class="videoContainer__skip" id="skip">
+          <p>IGNORER</p>
+          <img src="../assets/images/svg/skip.svg" />
+        </div>
+      </a>
       <div class="videoContainer__mute" id="mute">
         <img class="muteIcon" src="../assets/images/svg/mute.svg" />
         <img class="unmuteIcon" src="../assets/images/svg/unmute.svg" />
@@ -140,17 +140,17 @@
         <img src="../assets/images/svg/moreinfo.svg" />
       </div>
       <img
-      class="videoContainer__indicatorBD1"
-      src="../assets/images/svg/line.svg"
-    />
-    <img
-      class="videoContainer__indicatorBD2"
-      src="../assets/images/svg/line.svg"
-    />
-    <img
-      class="videoContainer__indicatorBD3"
-      src="../assets/images/svg/line.svg"
-    />
+        class="videoContainer__indicatorBD1"
+        src="../assets/images/svg/line.svg"
+      />
+      <img
+        class="videoContainer__indicatorBD2"
+        src="../assets/images/svg/line.svg"
+      />
+      <img
+        class="videoContainer__indicatorBD3"
+        src="../assets/images/svg/line.svg"
+      />
       <div id="video-bar" class="video-bar">
         <div id="video-juice" class="video-juice"></div>
       </div>
@@ -160,4 +160,28 @@
     </div>
   </body>
   <script type="text/javascript" src="../js/main.js"></script>
+  <script>
+    var vidBD = document.getElementById("videoBD");
+
+    var indicatorBD1 = document.querySelector(".videoContainer__indicatorBD1");
+    var indicatorBD2 = document.querySelector(".videoContainer__indicatorBD2");
+    var indicatorBD3 = document.querySelector(".videoContainer__indicatorBD3");
+
+    // Redirection
+
+    indicatorBD1.addEventListener("click", function() {
+      vidBD.currentTime = 4;
+      vidBD.play();
+    });
+
+    indicatorBD2.addEventListener("click", function() {
+      vidBD.currentTime = 75;
+      vidBD.play();
+    });
+
+    indicatorBD3.addEventListener("click", function() {
+      vidBD.currentTime = 114;
+      vidBD.play();
+    });
+  </script>
 </html>

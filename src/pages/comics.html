@@ -168,4 +168,27 @@
   </body>
 
   <script type="text/javascript" src="../js/main.js"></script>
+  <script>
+    var vidComics = document.getElementById("videoComics");
+
+  var indicatorComics1 = document.querySelector(".videoContainer__indicatorComics1");
+    var indicatorComics2 = document.querySelector(".videoContainer__indicatorComics2");
+    var indicatorComics3 = document.querySelector(".videoContainer__indicatorComics3");
+    
+    // Redirection 
+    
+    indicatorComics1.addEventListener("click", function() {
+      vidComics.currentTime = 8;
+      vidComics.play();
+    });
+    
+    indicatorComics2.addEventListener("click", function() {
+      vidComics.currentTime = 101;
+      vidComics.play();
+    });
+    
+    indicatorComics3.addEventListener("click", function() {
+      vidComics.currentTime = 267;
+      vidComics.play();
+    });</script>
 </html>
