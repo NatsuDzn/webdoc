@@ -453,4 +453,4 @@ close3.addEventListener("click", function() {
   img3BD.style.transform = "";
   imgText3.style.display = "";
   vid.play();
-})
+});

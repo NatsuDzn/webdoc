@@ -2,7 +2,7 @@
 @import "pages/fonts";
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Mont', sans-serif;
 }
 
 a {
@@ -11,12 +11,13 @@ a {
 }
 
 .backgroundImg1 {
+  display: block;
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
   position: absolute;
   z-index: -1;
   opacity: 0;
-  object-fit: cover;
   transition: opacity 0.2s;
   &.change {
     width: 100vw;
@@ -29,8 +30,10 @@ a {
 
 .backgroundImg2 {
   position: absolute;
+  display: block;
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.2s;
@@ -44,23 +47,26 @@ a {
 }
 
 .backgroundImg3 {
+  display: block;
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
   position: absolute;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.2s;
   &.change {
+    display: block;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    object-fit: cover;
     z-index: -1;
     opacity: 1;
   }
 }
 
 .text {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Mont', sans-serif;
   color: white;
   width: 50vw;
   font-size: 64px;
@@ -68,7 +74,7 @@ a {
 
 p,
 .cultures {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Mont', sans-serif;
   color: white;
   font-size: 18px;
 }
@@ -201,14 +207,14 @@ main,
 .nbrScroll {
   margin-top: 130px;
   margin-left: 50px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Mont', sans-serif;
   color: #f0b966;
 }
 
 .textScroll {
   margin-top: 130px;
   margin-left: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Mont', sans-serif;
   color: white;
 }
 

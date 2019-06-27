@@ -1,0 +1,120 @@
+@import "home";
+@import "pages/animations";
+
+// Page End
+
+.bodyManga {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/images/home/manga.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bodyComics {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/images/home/Group_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bodyBD {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/images/home/uderzo_risquetout13.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scrollElements {
+  position: absolute;
+  left: 350px;
+}
+
+.endContent {
+  opacity: 0;
+  transition: ease .5s;
+}
+
+.endAll {
+  margin-bottom: 150px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.endText {
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  padding-left: 100px;
+  padding-bottom: 25px;
+}
+
+.endSubText {
+  font-size: 24px;
+  color: white;
+  padding-left: 100px;
+  padding-bottom: 25px;
+}
+
+.endImg {
+  position: fixed;
+  top: 41%;
+  left: 36%;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+br {
+  padding-bottom: 10px;
+}
+
+.separator {
+  position: absolute;
+  margin-left: 5px;
+  width: 72px;
+  border: 1px solid #f0b966;
+}
+
+.separator2 {
+  position: absolute;
+  left: 91%;
+  border: 1px solid #f0b966;
+  width: 72px;
+}
+
+.first {
+  position: absolute;
+  left: 46.31%;
+  top: 22.4%;
+  bottom: 54.67%;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+.second {
+  position: absolute;
+  left: 5.49%;
+  top: 66.93%;
+  bottom: 5.33%;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.endBack {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  animation: fadeInUp 1s;
+}

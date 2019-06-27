@@ -1,1 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+@font-face {
+  font-family: 'Mont';
+  src: url('../../src/assets/fonts/Mont-Regular.woff2') format('woff2'),
+      url('../../src/assets/fonts/Mont-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mont';
+  src: url('../../src/assets/fonts/Mont-SemiBold.woff2') format('woff2'),
+      url('../../src/assets/fonts/Mont-SemiBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+

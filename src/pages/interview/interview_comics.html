@@ -20,10 +20,12 @@
         <img class="pauseIcon" src="../../assets/images/svg/pause.svg" />
         <img class="playIcon" src="../../assets/images/svg/play.svg" />
       </div>
-      <div class="videoContainer__skip" id="skip">
-        <p>IGNORER</p>
-        <img src="../../assets/images/svg/skip.svg" />
-      </div>
+      <a href="../ending/ending_comics.html">
+        <div class="videoContainer__skip" id="skip">
+          <p>IGNORER</p>
+          <img src="../../assets/images/svg/skip.svg" />
+        </div>
+      </a>
       <div class="videoContainer__mute" id="mute">
         <img class="muteIcon" src="../../assets/images/svg/mute.svg" />
         <img class="unmuteIcon" src="../../assets/images/svg/unmute.svg" />
@@ -44,7 +46,7 @@
   </body>
   <script type="text/javascript" src="../../js/main.js"></script>
   <script>
-      var interviewComics = document.getElementById("comicsInterview");
+    var interviewComics = document.getElementById("comicsInterview");
     var juice = document.getElementById("video-juice");
 
     interviewComics.ontimeupdate = function() {
@@ -52,13 +54,13 @@
     };
 
     function interview2() {
-        // Display the current position of the video in a p element with id="demo"
-        document.getElementById("demo").innerHTML = interviewComics.currentTime;
+      // Display the current position of the video in a p element with id="demo"
+      document.getElementById("demo").innerHTML = interviewComics.currentTime;
 
-        interviewComics.addEventListener("timeupdate", function() {
-          var juicePos = interviewComics.currentTime / interviewComics.duration;
-          juice.style.width = juicePos * 100 + "%";
-        });
-      }
+      interviewComics.addEventListener("timeupdate", function() {
+        var juicePos = interviewComics.currentTime / interviewComics.duration;
+        juice.style.width = juicePos * 100 + "%";
+      });
+    }
   </script>
 </html>
