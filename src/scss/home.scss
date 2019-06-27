@@ -309,6 +309,26 @@ footer {
   min-width: 100vw;
 }
 
+.cta {
+  cursor: pointer;
+  background-color: #f0b966;
+  padding: 5px;
+  position: absolute;
+  top: 540px;
+  right: 1140px;
+  z-index: 2;
+  transition: 0.35s ease-in-out;
+  border-radius: 50%;
+}
+
+.arrowIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  filter: invert(100%);
+}
+
 .disclamer {
   padding-top: 150px;
   width: 50vw;

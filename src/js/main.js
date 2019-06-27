@@ -12,6 +12,7 @@ var img2 = document.querySelector(".backgroundImg2");
 var img3 = document.querySelector(".backgroundImg3");
 var h1 = document.querySelector(".text")
 var fleche = document.querySelectorAll(".flecheScroll");
+var link = document.querySelector(".ctalinks");
 
 window.addEventListener("scroll", () => {
   const scrolled = window.scrollY;
@@ -29,6 +30,7 @@ window.addEventListener("scroll", () => {
     img2.classList.add("change");
     fleches.classList.add("change");
     h1.innerHTML = `Le <span class="couleur">traumatisme</span></br>d’Hiroshima à travers la</br> bande dessinée`;
+    link.href="../pages/manga.html"; 
   }
   if (scrolled > 461) {
     ligneSquare.classList.remove("changee");
@@ -44,6 +46,7 @@ window.addEventListener("scroll", () => {
     img3.classList.remove("change");
     fleches.classList.remove("change");
     h1.innerHTML = 'La bande dessinée au</br> service de la</br> <span class="couleur">propagande</span>';
+    link.href="../pages/comics.html"; 
   }
   if (scrolled > 922) {
     ligneSquare.classList.remove("change");
@@ -55,6 +58,7 @@ window.addEventListener("scroll", () => {
     img3.classList.add("change");
     fleches.classList.remove("change");
     h1.innerHTML = 'La <span class="couleur">déshumanisation</span> à</br> travers la bande</br> dessinée';
+    link.href="../pages/bd.html"; 
   }
 });
 
@@ -141,12 +145,14 @@ document.onkeydown = function(event) {
 
       vid_currentTime = vid.currentTime;
       vid.currentTime = vid_currentTime - 5;
+      vid.pause();
 
     case 39:
       event.preventDefault();
 
       vid_currentTime = vid.currentTime;
       vid.currentTime = vid_currentTime + 5;
+      vid.pause();
 
     case 32:
       event.preventDefault();
