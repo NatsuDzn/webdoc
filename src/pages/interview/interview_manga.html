@@ -56,6 +56,10 @@
     var interviewManga = document.getElementById("mangaInterview");
     var juice = document.getElementById("video-juice");
 
+    interviewManga.addEventListener("ended", function() {
+      window.location.href = "../ending/ending_manga.html";
+    });
+
     // Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
     interviewManga.ontimeupdate = function() {
       interview();

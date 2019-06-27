@@ -59,6 +59,10 @@
     var interviewComics = document.getElementById("comicsInterview");
     var juice = document.getElementById("video-juice");
 
+    interviewComics.addEventListener("ended", function() {
+      window.location.href = "../ending/ending_comics.html";
+    });
+
     interviewComics.ontimeupdate = function() {
       interview2();
     };

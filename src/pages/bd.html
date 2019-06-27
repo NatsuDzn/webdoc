@@ -167,7 +167,6 @@
   <script type="text/javascript" src="../js/main.js"></script>
   <script>
     var vidBD = document.getElementById("videoBD");
-
     var indicatorBD1 = document.querySelector(".videoContainer__indicatorBD1");
     var indicatorBD2 = document.querySelector(".videoContainer__indicatorBD2");
     var indicatorBD3 = document.querySelector(".videoContainer__indicatorBD3");
@@ -187,6 +186,10 @@
     indicatorBD3.addEventListener("click", function() {
       vidBD.currentTime = 114;
       vidBD.play();
+    });
+
+    vidBD.addEventListener("ended", function() {
+      window.location.href = "../pages/interview/interview_bd.html";
     });
   </script>
 </html>

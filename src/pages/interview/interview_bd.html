@@ -56,6 +56,10 @@
     var interviewBD = document.getElementById("bdInterview");
     var juice = document.getElementById("video-juice");
 
+    interviewBD.addEventListener("ended", function() {
+      window.location.href = "../ending/ending_bd.html";
+    });
+
     interviewBD.ontimeupdate = function() {
       interview3();
     };

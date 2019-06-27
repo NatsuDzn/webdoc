@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>La BD</title>
+    <title>Le manga</title>
     <link rel="stylesheet" href="../scss/styles.scss" />
   </head>
 
@@ -180,4 +180,11 @@
   </body>
   <script type="text/javascript" src="../js/main.js"></script>
   <script type="text/javascript" src="../js/manga.js"></script>
+  <script>
+    var vidManga = document.getElementById("videoManga");
+
+    vidManga.addEventListener("ended", function() {
+      window.location.href = "../pages/interview/interview_manga.html";
+    });
+  </script>
 </html>

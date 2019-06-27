@@ -203,4 +203,11 @@
       vidComics.play();
     });
   </script>
+  <script>
+    var vidComics = document.getElementById("videoComics");
+
+    vidComics.addEventListener("ended", function() {
+      window.location.href = "../pages/interview/interview_comics.html";
+    });
+  </script>
 </html>
