@@ -4,8 +4,9 @@
 @import "pages/fonts.scss";
 @import "pages/modals.scss";
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  overflow: hidden;
 }
 
 body {
@@ -152,11 +153,37 @@ body {
 .video-juice {
   position: absolute;
   height: 20px;
-  background-color: #f0b966;
+  background-color: $accent-color;
   z-index: 3;
   width: 0px;
   transition: 0.5s ease;
   z-index: 4;
+}
+
+.authorName {
+  position: absolute;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+  font-weight: 700;
+  top: 16px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 100px;
+
+  &__text {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    color: black;
+    font-size: 18px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
 }
 
 .button {
@@ -166,7 +193,7 @@ body {
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #f0b966;
+  background-color: $accent-color;
   color: white;
   text-transform: uppercase;
   transition: 0.35s ease-in-out;
@@ -183,11 +210,11 @@ body {
 }
 
 .highlights {
-  color: #f0b966;
+  color: $accent-color;
 }
 
 .hcolor {
-  color: #f0b966;
+  color: $accent-color;
   font-weight: 700;
 }
 

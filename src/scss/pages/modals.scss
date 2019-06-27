@@ -25,6 +25,7 @@
   padding-left: 184px;
   padding-top: 252px;
   background-image: url("/assets/images/comics/comics1.jpg");
+  @include bg-setup;
 }
 
 .bgImgleft1BD {

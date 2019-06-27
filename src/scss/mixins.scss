@@ -1,3 +1,5 @@
+$accent-color: #f0b966;
+
 @mixin video-controls {
   cursor: pointer;
   background-color: white;
@@ -25,7 +27,7 @@
   position: absolute;
   font-weight: 700;
   z-index: 3;
-  color: #f0b966;
+  color: $accent-color;
 }
 
 @mixin indicator-style {
