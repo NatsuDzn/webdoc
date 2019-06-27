@@ -322,14 +322,34 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1280px) {
-  .videoContainer {
-    &__title {
-      font-size: 36px;
+.mobileWarning {
+  display: none;
+}
+
+@media only screen and (max-width: 1070px) {
+  .mobileWarning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    &__text {
+      color: white;
+      text-align: center;
     }
 
-    &__info {
+    &__icon {
       display: flex;
+      width: 56px;
+      filter: invert(100%);
+      margin-bottom: 50px;
     }
+  }
+
+  .complete, .videoContainer, .video {
+    display: none;
   }
 }

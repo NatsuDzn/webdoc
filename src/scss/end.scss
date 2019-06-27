@@ -118,3 +118,32 @@ br {
   right: 35px;
   animation: fadeInUp 1s;
 }
+
+@media only screen and (max-width: 1070px) {
+  .mobileWarning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    &__text {
+      color: white;
+      text-align: center;
+    }
+
+    &__icon {
+      display: flex;
+      width: 56px;
+      filter: invert(100%);
+      margin-bottom: 50px;
+    }
+  }
+
+  .complete, .videoContainer, .video, .endImg, .endBack {
+    display: none;
+  }
+  
+}

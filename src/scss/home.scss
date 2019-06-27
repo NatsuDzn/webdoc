@@ -2,7 +2,7 @@
 @import "pages/fonts";
 
 body {
-  font-family: 'Mont', sans-serif;
+  font-family: "Mont", sans-serif;
 }
 
 a {
@@ -66,7 +66,7 @@ a {
 }
 
 .text {
-  font-family: 'Mont', sans-serif;
+  font-family: "Mont", sans-serif;
   color: white;
   width: 50vw;
   font-size: 64px;
@@ -74,7 +74,7 @@ a {
 
 p,
 .cultures {
-  font-family: 'Mont', sans-serif;
+  font-family: "Mont", sans-serif;
   color: white;
   font-size: 18px;
 }
@@ -207,14 +207,14 @@ main,
 .nbrScroll {
   margin-top: 130px;
   margin-left: 50px;
-  font-family: 'Mont', sans-serif;
+  font-family: "Mont", sans-serif;
   color: #f0b966;
 }
 
 .textScroll {
   margin-top: 130px;
   margin-left: 20px;
-  font-family: 'Mont', sans-serif;
+  font-family: "Mont", sans-serif;
   color: white;
 }
 
@@ -314,4 +314,36 @@ footer {
   width: 50vw;
   text-align: center;
   font-size: 14px;
+}
+
+.mobileWarning {
+  display: none;
+}
+
+@media only screen and (max-width: 1070px) {
+  .mobileWarning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    &__text {
+      color: white;
+      text-align: center;
+    }
+
+    &__icon {
+      display: flex;
+      width: 56px;
+      filter: invert(100%);
+      margin-bottom: 50px;
+    }
+  }
+
+  .scroll {
+    display: none;
+  }
 }
