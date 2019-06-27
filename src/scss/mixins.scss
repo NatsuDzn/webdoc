@@ -1,0 +1,45 @@
+@mixin video-controls {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+  transition: 0.35s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+}
+
+@mixin bg-setup {
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+}
+
+@mixin img-title {
+  display: none;
+  position: absolute;
+  font-weight: 700;
+  z-index: 3;
+  color: #f0b966;
+}
+
+@mixin indicator-style {
+  filter: invert(100%);
+  position: absolute;
+  z-index: 100;
+  transition: 0.35s ease-in-out;
+  height: 22px;
+  transform: scale(1.05) rotate(90deg);
+}
+
+@mixin ending-bg {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,30 +1,22 @@
 @import "home";
+@import "mixins";
 @import "pages/animations";
 
 // Page End
 
 .bodyManga {
-  height: 100vh;
-  width: 100vw;
+  @include ending-bg;
   background-image: url("../assets/images/home/manga.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .bodyComics {
-  height: 100vh;
-  width: 100vw;
+  @include ending-bg;
   background-image: url("../assets/images/home/Group_2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .bodyBD {
-  height: 100vh;
-  width: 100vw;
+  @include ending-bg;
   background-image: url("../assets/images/home/uderzo_risquetout13.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .scrollElements {
@@ -34,7 +26,7 @@
 
 .endContent {
   opacity: 0;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
 
 .endAll {
@@ -54,14 +46,14 @@
   font-size: 80px;
   font-weight: 700;
   color: white;
-  padding-left: 100px;
+  padding-left: 16%;
   padding-bottom: 25px;
 }
 
 .endSubText {
   font-size: 24px;
   color: white;
-  padding-left: 100px;
+  padding-left: 16%;
   padding-bottom: 25px;
 }
 
@@ -114,8 +106,8 @@ br {
 
 .endBack {
   position: fixed;
-  bottom: 35px;
-  right: 35px;
+  bottom: 2%;
+  right: 1%;
   animation: fadeInUp 1s;
 }
 
@@ -142,8 +134,11 @@ br {
     }
   }
 
-  .complete, .videoContainer, .video, .endImg, .endBack {
+  .complete,
+  .videoContainer,
+  .video,
+  .endImg,
+  .endBack {
     display: none;
   }
-  
 }

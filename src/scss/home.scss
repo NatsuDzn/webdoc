@@ -86,7 +86,6 @@ p,
 }
 
 .logo {
-  margin-right: 920px;
   font-size: 30px;
 }
 
@@ -330,7 +329,8 @@ footer {
 }
 
 .disclamer {
-  padding-top: 150px;
+  position: fixed;
+  bottom: 3%;
   width: 50vw;
   text-align: center;
   font-size: 14px;
