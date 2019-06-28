@@ -10,7 +10,7 @@ var nbr3 = document.querySelector(".nbrTop3");
 var img1 = document.querySelector(".backgroundImg1");
 var img2 = document.querySelector(".backgroundImg2");
 var img3 = document.querySelector(".backgroundImg3");
-var h1 = document.querySelector(".text")
+var h1 = document.querySelector(".text");
 var fleche = document.querySelectorAll(".flecheScroll");
 var link = document.querySelector(".ctalinks");
 
@@ -30,7 +30,7 @@ window.addEventListener("scroll", () => {
     img2.classList.add("change");
     fleches.classList.add("change");
     h1.innerHTML = `Le <span class="couleur">traumatisme</span></br>d’Hiroshima à travers la</br> bande dessinée`;
-    link.href="../pages/manga.html"; 
+    link.href = "../pages/manga.html";
   }
   if (scrolled > 461) {
     ligneSquare.classList.remove("changee");
@@ -45,8 +45,9 @@ window.addEventListener("scroll", () => {
     img1.classList.add("change");
     img3.classList.remove("change");
     fleches.classList.remove("change");
-    h1.innerHTML = 'La bande dessinée au</br> service de la</br> <span class="couleur">propagande</span>';
-    link.href="../pages/comics.html"; 
+    h1.innerHTML =
+      'La bande dessinée au</br> service de la</br> <span class="couleur">propagande</span>';
+    link.href = "../pages/comics.html";
   }
   if (scrolled > 922) {
     ligneSquare.classList.remove("change");
@@ -57,8 +58,9 @@ window.addEventListener("scroll", () => {
     nbr3.classList.add("change");
     img3.classList.add("change");
     fleches.classList.remove("change");
-    h1.innerHTML = 'La <span class="couleur">déshumanisation</span> à</br> travers la bande</br> dessinée';
-    link.href="../pages/bd.html"; 
+    h1.innerHTML =
+      'La <span class="couleur">déshumanisation</span> à</br> travers la bande</br> dessinée';
+    link.href = "../pages/bd.html";
   }
 });
 
@@ -315,7 +317,7 @@ close3.addEventListener("click", function() {
   vid.play();
 });
 
-// BD 
+// BD
 
 // Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
 vidBD.ontimeupdate = function() {
