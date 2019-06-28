@@ -47,7 +47,7 @@ Serve the `dist` folder.
 - [Express](https://expressjs.com/) - Server Framework ⚠️
 - [VueJs](https://vuejs.org/) - Web Framework ⚠️
 
-We originally wanted to use VueJs and MongoDB, but there was some issue with the main back dev so the other back dev manages to make it but it was late to add/merge it into the website.
+We originally wanted to use VueJs and MongoDB, but there was some issue with the main back dev so the other back dev manages to make it but it was too late to add/merge it into the website.
 You can find it here : https://github.com/Johpur/fullstack_vue_express
 Other than that, we used parcel to make things easier.
 
