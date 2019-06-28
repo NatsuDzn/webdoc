@@ -43,9 +43,13 @@ Serve the `dist` folder.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 - [NodeJs](https://nodejs.org/en/) - Server Environment
-- [MongoDB](https://www.mongodb.com/) - Database (not added yet)
-- [Express](https://expressjs.com/) - Server Framework (not added yet)
-- [VueJs](https://vuejs.org/) - Web Framework (not added yet)
+- [MongoDB](https://www.mongodb.com/) - Database ⚠️
+- [Express](https://expressjs.com/) - Server Framework ⚠️
+- [VueJs](https://vuejs.org/) - Web Framework ⚠️
+
+We originally wanted to use VueJs and MongoDB, but there was some issue with the main back dev so the other back dev manages to make it but it was late to add/merge it into the website.
+You can find it here : https://github.com/Johpur/fullstack_vue_express
+Other than that, we used parcel to make things easier.
 
 ## ✍️ Authors <a name = "authors"></a>
 - [Louzoun Nathanael](https://github.com/NatsuDzn) - Front Dev
